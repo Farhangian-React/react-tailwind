@@ -22,7 +22,7 @@ export const Stores = () => {
 
  </div>
 
-<div className='flex flex-col lg:hidden justify-center  bg-white my-1 mx-5 px-5 py-1 rounded-sm ' >
+<div className='flex flex-col lg:hidden justify-center  bg-white my-1 mx-1 px-0 py-1 rounded-sm ' >
 
 
 <Selector/>

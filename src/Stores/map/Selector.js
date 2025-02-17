@@ -66,15 +66,16 @@ setDatamapshow([t]);
   };
   return (
     <>
-    <div className='flex flex-col justify-start  bg-white my-2 mx-2 px-2 py-1 h-[300px]
+    <div className='flex flex-col justify-start w-full  bg-white my-2 mx-0 md:mx-2 px-0 md:px-2 py-1 h-[300px]
     '
     >
   <div dir="rtl" className='flex flex-row justify-center rounded-xl bg-indigo-50
-   py-2 px-5 mx-1'
+   py-0 md:py-2 px-0 sm:px-3 md:px-5 mx-0 md:mx-1 '
   >
-    <FormControl variant="standard" sx={{ my:1,mx:3, minWidth: 120, }}>
-        <InputLabel id="demo-simple-select-standard-label"> انتخاب استان</InputLabel>
+    <FormControl  dir='rtl' variant="standard" sx={{ my:1,mx:5, minWidth: 120, }}>
+        <InputLabel  id="demo-simple-select-standard-label"> انتخاب استان</InputLabel>
         <Select
+      
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
         value={fromostan.name}
@@ -87,7 +88,7 @@ setDatamapshow([t]);
         ))}
         </Select>
       </FormControl>
-      <FormControl variant='standard' sx={{ direction:"ltr", my:1,mx:3, minWidth: 120 }}>
+      <FormControl variant='standard' sx={{ direction:"ltr", my:1,mx:5, minWidth: 120 }}>
         <InputLabel id="demo-simple-select-standard-label" > انتخاب شهر</InputLabel>
         <Select
           value={fromCities.city}

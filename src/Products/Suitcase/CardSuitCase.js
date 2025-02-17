@@ -105,7 +105,7 @@ currentItems &&
     onClick={()=>{
      setCartItems([item]);
     }}
-    key={item.id} className='flex justify-center items-center mx-auto px-0 backdrop-blur-lg rounded-2xl '>
+    key={item.id} className='flex justify-center items-center mx-auto px-0 backdrop-blur-lg rounded-3xl '>
       <div  className='bg-white relative w-[320px] h-[370px]  rounded-lg shadow-xl
       transition delay-150 duration-300 ease-in-out hover:h-[450px] overflow-hidden mx-3 my-3
       ' >

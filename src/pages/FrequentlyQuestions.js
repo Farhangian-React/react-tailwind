@@ -28,7 +28,7 @@ export default function FrequentlyQuestions() {
  
   return (
     <>
-    <div dir="rtl" className="mx-10 my-10">
+    <div dir="rtl" className="mx-1 md:mx-10 my-10">
     <div className=' bordershadow flex flex-col justify-center items-center mx-auto my-5 w-[250px] '  >
   <p className='text-[20px] text-center text-[#371303] px-5 pb-1 font-bold  '> سوالات پر تکرار</p>
       </div>

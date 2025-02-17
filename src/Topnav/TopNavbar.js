@@ -223,7 +223,7 @@ navigate("/")
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 </div>
 <div className=" hidden md:flex  justify-between pr-4 py-0 h-8 ">
-<div   className=' flex border-2 border-gray-300  py-4 mt-1 rounded hover:border-2 hover:border-orange-500'>
+<div   className=' flex border-2 border-gray-300  py-4 mt-1 rounded hover:border-2 hover:border-orange-500 px-2'>
 <NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
 >
 <GoSignIn className='flex lg:w-5 lg:h-5 mx-2 font-black' />
@@ -267,7 +267,7 @@ className="block cursor-pointer shrink-0 rounded-lg p-2.5 border border-gray-100
   
 </nav>
 
-<nav dir="rtl" className= "sticky top-0 flex  border-b-red-600 md:hidden w-screen bg-white h-[60px] px-10  justify-between items-center ">
+<nav dir="rtl" className= " flex  border-b-red-600 md:hidden w-screen bg-white h-[60px] px-10  justify-between items-center ">
 
 <div className="   flex items-center ">
 <button  onClick={handleDrawerOpen} className="inline-flex items-center justify-center p-2 rounded-md text-gray-900  hover:bg-orange-500 hover:text-indigo-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
