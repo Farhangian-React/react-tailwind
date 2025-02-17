@@ -1,0 +1,144 @@
+.nav:hover{
+color: aqua;
+}
+.text{
+    font-size:22px;
+    font-weight: 600;
+    
+}
+.icon{
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 400px;
+    background: blue;
+    flex-direction: column;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.bordershadow{
+    box-shadow:10px 10px 10px #281e5d;
+}
+.shadowcomments{
+    box-shadow:10px 10px 10px #170570;
+}
+.vv{
+    box-shadow: 20px 10px 0 10px white;
+}
+.off{
+ 
+   text-decoration-line:line-through;
+   text-decoration-color: oklch(0.75 0.183 55.934);
+   
+  }
+  .boxoff{
+    display: none;
+    color:  rgba(32, 4, 142, 0.35);
+   
+  }
+
+   .boxnotcomments{
+    display: flex;
+    justify-content: center;
+   }
+   .displycomment{
+    display: flex;
+    overflow:visible;
+   white-space: wrap;
+   flex-direction: column;
+   background-color: white;
+   padding: 25px;
+   margin: 5px;
+  
+   border-radius:10px ;
+   direction:ltr ;
+   }
+   .vis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: self-end;
+    align-items: flex-end;
+    padding: 25px;
+   margin: 5px;
+  
+   border-radius:10px ;
+   direction:ltr ;
+    overflow: visible;
+   }
+   .hid{
+    display: none;
+   }
+   .disply{
+    display: flex;
+    background-color: white;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  .boxcommentref{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: self-end;
+    align-items:end;
+    padding: 25px;
+   margin: 5px;
+   border-radius:10px ;
+  }
+  .boxx
+    {
+
+
+        height: 200px;
+        background-color: white;
+        clip-path: ellipse(80% 50% at 50% 50%);
+
+      }
+  
+
+      .button1 {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color:oklch(0.257 0.09 281.288);
+        --button_outline_color:oklch(0.75 0.183 55.934);
+        font-size:20px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+       
+      }
+      
+      
+      .formbutton {
+        display: block;
+        box-sizing:border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 0.25em 0.25em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+      font-size: medium;
+       
+      }
+      
+      .button1:hover .formbutton {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+      }
+      
+      .button1:active .formbutton {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+      }
