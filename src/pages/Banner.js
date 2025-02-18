@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import bag1 from "../img/animatbag1.jpg";
+import bag1 from "../img/images.jpg";
 import bag2 from "../img/animatech1.jpg";
 import bag3 from "../img/animatshoes1.avif";
 import bag4 from "../img/animateai1.jpg";
@@ -12,7 +12,14 @@ import "../pages/pages.css";
 
 function Banner() {
 
-
+  useEffect(() => {
+    AOS.init({
+      disable: "phone",
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+    
+  }, [])
   return (
     <>
     
