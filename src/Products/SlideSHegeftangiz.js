@@ -106,7 +106,7 @@ useEffect(()=>{
 
     return (
       <>
-      <div className="inline md:hidden mx-20 py-5  w-5/8 px-5 h-[400px] mt-60 ">
+      <div className="inline md:hidden mx-20 py-5  w-5/8 px-5 h-[400px] mt-20 ">
         <Slide  slidesToScroll={1} slidesToShow={1} indicators={false}   >
          {data.map((item)=> (
            <NavLink to={"./buy"}>  <div
@@ -156,7 +156,7 @@ useEffect(()=>{
           ))} 
         </Slide>
       </div>
-      <div className="hidden md:inline lg:hidden mx-20 py-5  w-5/8 px-5 h-[400px]  mt-60">
+      <div className="hidden md:inline lg:hidden mx-20 py-5  w-5/8 px-5 h-[400px]  mt-20">
         <Slide  slidesToScroll={1} slidesToShow={2} indicators={false}   >
          {data.map((item)=> (
           <NavLink to={"./buy"}>  <div
@@ -204,7 +204,7 @@ useEffect(()=>{
         </Slide>
       </div>
      
-      <div className="hidden lg:inline xl:hidden mx-20 py-5  w-5/8 px-5 h-[400px]  mt-60 ">
+      <div className="hidden lg:inline xl:hidden mx-20 py-5  w-5/8 px-5 h-[400px]  mt-20 ">
         <Slide  slidesToScroll={1} slidesToShow={3} indicators={false}   >
          {data.map((item)=> (
             <NavLink to={"./buy"}><div 
@@ -251,7 +251,7 @@ useEffect(()=>{
           ))} 
         </Slide>
       </div>
-      <div className="hidden xl:inline mx-20 py-5  w-5/8 px-5 h-[400px]  mt-60">
+      <div className="hidden xl:inline mx-20 py-5  w-5/8 px-5 h-[400px]  mt-20">
         <Slide  slidesToScroll={1} slidesToShow={4} indicators={false}   >
          {data.map((item)=> (
           <NavLink to={"./buy"}> <div
@@ -265,7 +265,7 @@ useEffect(()=>{
 
                  
 <div  className='shh relative w-full h-[270px] rounded-sm 
-                    before:absolute before:w-full before:h-[60px] before:bottom-[-12px] before:rounded-3xl before:bg-white
+                    before:absolute before:w-full before:h-[60px] before:bottom-[-12px] before:rounded-xl before:bg-white
                     after:absolute after:right-0 after:bottom-[48px] after:w-[50px] after:h-[50px] after:bg-transparent after:rounded-full  *
                 
                    bg-cover bg-center bg-no-repeat'  style={{

@@ -11,7 +11,7 @@
     color: rgb(222, 112, 16);
     width: 200px;
     text-align: right;
-    direction: rtl;
+    direction: ltr;
   }
   .hiden{
     display: none;

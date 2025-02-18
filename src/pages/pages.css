@@ -97,7 +97,8 @@ color: aqua;
 
         height: 200px;
         background-color: white;
-        clip-path: ellipse(80% 50% at 50% 50%);
+        margin-top: -90px;
+        clip-path: ellipse(50% 50% at 50% 50%);
 
       }
   

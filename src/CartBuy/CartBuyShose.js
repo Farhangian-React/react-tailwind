@@ -276,13 +276,21 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
     </div>
     <Box  sx={{display:"flex",flexDirection:"column",bgcolor:"#ececec"}}>
     {cartItems.map(i=>
-    <Box container sx={{display:'flex',flexDirection:"row",bgcolor:'white',mx:5,mb:2,mt:{xs:12,lg:2},borderRadius:'10px',direction:'rtl'}}>
+    <Box container sx={{display:{xs:"flex",md:"none"},flexDirection:"row",bgcolor:'white',mx:{xs:1,md:5},my:2,borderRadius:'10px',direction:'rtl'}}>
+      <p className='text-gray-600 text-xs py-1  px-1 ' > کفش /
+       </p><p className='text-indigo-800  text-sm '  >{i.title1} </p>
+    </Box>
+    
+    )}
+     {cartItems.map(i=>
+    <Box container sx={{display:{xs:"none",md:"flex"},flexDirection:"row",bgcolor:'white',mx:{xs:1,md:5},my:2,borderRadius:'10px',direction:'rtl'}}>
       <p className='text-gray-600 text-sm py-1 px-2' >محصولات / کفش /
        </p><p className='text-indigo-800  text-lg'  >{i.title1} </p>
     </Box>
+    
     )}
-   <div dir='rtl' class="grid grid-cols-1 gap-8 lg:grid-cols-2 w-[95%] bg-white rounded-xl mx-auto ">
-   <Box   sx={{mt:{xs:5,lg:1}, mx:{xs:1,lg:3},display:'flex',flexDirection:"column",justifyContent:'start',alignSelf:{xs:"center",lg:"start"},direction:'rtl'}} >
+   <div dir='rtl' class="grid grid-cols-1 gap-5 lg:grid-cols-2 w-[95%] bg-white rounded-xl mx-auto ">
+   <Box   sx={{mt:1, mx:{xs:1,lg:3},display:'flex',flexDirection:"column",justifyContent:'start',alignSelf:{xs:"center",lg:"start"},direction:'rtl'}} >
        <Box  sx={{mx:{xs:0,lg:2},mt:{xs:2,lg:4},pt:{lg:1},display:'flex',alignItems:'center',justifyContent:'center'}} >
 
           <Box 
@@ -293,7 +301,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
             backgroundPosition: 'center',
             backgroundSize:'cover',
             backgroundRepeat: 'no-repeat',
-            height:"650px",
+            height:{xs:"450px",sm:"650px"},
             width:"600px",
            my:{xs:0},
     
@@ -303,8 +311,35 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 
       
         </Box>
+        {cartItems.map(i=>
+         <div className="inline md:hidden mx-auto py-5 px-2 w-full  md:w-full  h-[150px] ">
+   
+        <Slide  slidesToScroll={1} slidesToShow={3} indicators={false}   >
+        {i.imgslid.map(j=>
+         <Link onClick={()=>setImage(j.imga)}>
+
+          
+<Box  
+       sx={{
+        display:"flex",
+        borderRadius:5,
+        backgroundImage:`url(${j.imga})`,
+        backgroundPosition: 'center',
+        backgroundSize:'cover',
+        backgroundRepeat: 'no-repeat',
+        height:"100px",
+        width:"90px",
+       my:{xs:2,lg:1},p:0
+       ,display:'flex',alignItems:'center',justifyContent:'center',mx:1}}> 
+        </Box>
+        </Link>
+          )} 
+        </Slide>
+     
+        </div>
+      )}
       {cartItems.map(i=>
-         <div className="inline mx-auto py-5 px-10 w-[90%]  md:w-full  h-[150px] ">
+         <div className="hidden md:inline mx-auto py-5 px-10 w-[90%]  md:w-full  h-[150px] ">
    
         <Slide  slidesToScroll={1} slidesToShow={4} indicators={false}   >
         {i.imgslid.map(j=>
@@ -319,8 +354,8 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         backgroundPosition: 'center',
         backgroundSize:'cover',
         backgroundRepeat: 'no-repeat',
-        height:{xs:"80px",lg:"100px"},
-        width:{xs:"80px",lg:"100px"},
+        height:"100px",
+        width:"100px",
        my:{xs:2,lg:1},p:0
        ,display:'flex',alignItems:'center',justifyContent:'center',mx:1}}> 
         </Box>
@@ -335,7 +370,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
          {cartItems.map(i=> 
          <Box   sx={{mt:2,py:2,display:'flex', flexDirection:'column',justifyContent:'center' }}> 
             <div className='flex flex-col justify-start items-start  mb-2 mx-2'  > 
-         <p  className='text-[24px]  mt-0 text-right'>{i.title1} </p>
+         <p  className='text-xs sm:text-sm text-gray-800 md:text-xl  mt-0 text-right font-bold'>{i.title1} </p>
            <Rating
         sx={{fontSize:"16px",py:2,mb:1}}
        name="simple-controlled"
@@ -357,10 +392,10 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
          </p>
           </div>  
           {cartItems.map(i=>
-          <div  className="flex w-full flex-row justify-start ">
+          <div  className="flex w-full flex-row justify-center mt-5 ">
             <div className='flex flex-col justify-start w-full mx-3 '>
               <p className='text-sm text-gray-700 text-start font-bold py-2 '> رنگ </p>
-        <Select dir="ltr" size="lg" className='align-text-top h-full pb-6 border-2
+        <Select dir="ltr" size="sm" className='align-text-top h-full pb-6 border-2
          border-indigo-800 hover:border-orange-500 rounded-lg ' >
       {i.color.map(j=>   
         <Option>{j.c}  </Option>
@@ -369,7 +404,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       </div>
       <div className='flex flex-col w-full h-[120px]  mx-3'>
       <p className='text-sm text-gray-700 text-start font-bold py-2'> اندازه </p>
-      <Select dir="ltr" size="lg" className='align-text-top h-full pb-6 border-2
+      <Select dir="ltr" size="sm" className='align-text-top h-full pb-6 border-2
        border-indigo-800 hover:border-orange-500 rounded-lg ' >
       {i.size.map(j=> 
         <Option>{j.z}</Option>
@@ -378,14 +413,14 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
     </div>
           )}
            
-           <div className='flex flex-row justify-start my-5 mx-2' >
+           <div className='flex flex-row justify-start my-1 md:my-2 mx-2' >
           <button onClick={()=> addToCart(i)}  className='button1' type='submit' >  <span className='formbutton'>   افزودن به سبد خرید  </span>
           </button>
           </div> 
          <Box sx={{display:'flex',justifyContent:'center',py:4,mb:3,mx:2}}>
          <BsFillInfoCircleFill sx={{mt:0,pr:1.5,fontSize:'18px',color:'#4b4f4f'}}/>
-         <Typography variant='body1' sx={{direction:'rtl',pl:5,pr:1,color:'#333637'}}> درخواست مرجوع کردن کالا در فروشگاه نهال با دلیل "انصراف از خرید" تنها در صورتی قابل تایید است که کالا در شرایط اولیه باشد 
-          (در صورت پلمپ بودن، کالا نباید باز شده باشد).</Typography>
+         <p className='text-xs md:text-sm text-gray-600 px-2'> درخواست مرجوع کردن کالا در فروشگاه نهال با دلیل "انصراف از خرید" تنها در صورتی قابل تایید است که کالا در شرایط اولیه باشد 
+          (در صورت پلمپ بودن، کالا نباید باز شده باشد).</p>
           </Box>
           <Box sx={{m:2, display:'flex',justifyContent:'center'}}>
         <Tooltip color='warning'  title="اضافه به علاقمندی">
@@ -427,7 +462,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 </div>
 
 
-<div dir='rtl' class=" w-[95%] bg-white rounded-xl mx-auto my-2 ">
+<div dir='rtl' class=" w-[95%] bg-white rounded-xl mx-auto my-3 ">
 <Tabs>
 <Tab label="مشخصات محصول">
 					<div className="py-4 w-3/4 bg-slate-400">
@@ -451,7 +486,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 				</Tab>
 				<Tab label="نظرات کاربران">
 {cartItems.map(i=>
-  <div dir='rtl' class="grid grid-cols-1 gap-8 lg:grid-cols-2 w-[95%] bg-white rounded-xl mx-auto ">
+  <div dir='rtl' class="grid grid-cols-1 gap-8 lg:grid-cols-2 w-[80%] bg-white rounded-xl mx-auto ">
     <div className='bg-white self-center items-center'>
     <div dir="rtl" className='flex flex-row w-[90%] self-center bg-white whitespace-pre-wrap rounded-sm px-3 py-0 -mx-5 my-4 '>
      <LuMessagesSquare className='font-black w-9 h-9 mt-2.5 text-indigo-800   hover:text-orange-500'/> 
@@ -474,11 +509,11 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 
 </div>
 </div>
-<div className='bg-white flex flex-col justify-center self-center h-[400px]'>
+<div className='bg-white flex flex-col justify-start md:justify-center self-start md:self-center h-[400px]'>
 <Box  ref={boxnotcomments} sx={{display:"none"}}> <Typography variant='h6' sx={{color:"#585858",textAlign:"center",mx:5}}> دیدگاهی برای این محصول ثبت نشده است</Typography> 
        </Box>
      <Box ref={boxcommentref} sx={{ display:"none"}}>
-      <div dir="rtl" className='shadowcomments  my-5 w-1/3 '  >
+      <div dir="rtl" className='shadowcomments  my-1 w-1/3 '  >
       <p  className='text-lg font-bold text-slate-700 text-center' >دید گاه ها...
       </p>
      </div>

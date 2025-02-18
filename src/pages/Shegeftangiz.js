@@ -19,8 +19,8 @@ function Shegeftangiz() {
       bg-gradient-to-r from-gray-100 via-[#dcc5a7] to-gray-100
       */}
 
-<div className='relative flex mx-auto w-full md:w-[95%] h-[650px]   '>
-        <div className= 'flex flex-col  justify-center bg-indigo-50  w-full h-full mt-6  mx-auto z-2'>
+<div className='relative flex mx-auto w-full md:w-[95%] h-[500px]   '>
+        <div className= 'flex flex-col  justify-center   bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100 w-full h-full mt-10 rounded-t-3xl  mx-auto  z-2'>
         <SlideSHegeftangiz/> 
 </div> 
         <div className='boxx flex flex-col  justify-center  absolute w-full  mx-auto  z-1  '>
