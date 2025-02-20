@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import bag1 from "../img/anebag2(1).png";
+import bag1 from "../img/banner300(1).png";
 import bag2 from "../img/ach1(1).png";
 import bag3 from "../img/aashose(1).png";
 import bag4 from "../img/aai1(1).png";
@@ -35,7 +35,7 @@ function Banner() {
        <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={80} height={80} src={bag1} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={80} height={80} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdRRnIXTsawD_0UkCHXvz9uyq2Osm1MwQpQ&s" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">کیف ها</p>
@@ -44,7 +44,7 @@ function Banner() {
         <div data-aos="zoom-out-right" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={80} height={80} src={bag2} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={80} height={80} src="https://img.clipart-library.com/2/clip-suitcases/clip-suitcases-18.jpg" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">چمدان ها</p>
@@ -52,7 +52,7 @@ function Banner() {
         <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={80} height={80} src={bag3} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={80} height={80} src="https://static.vecteezy.com/system/resources/previews/021/919/917/non_2x/women-s-shoes-with-heels-wedding-accessory-in-cartoon-style-illustration-isolated-on-white-vector.jpg" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">کفش ها</p>
@@ -60,7 +60,7 @@ function Banner() {
         <div data-aos="zoom-out-right" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={80} height={80} src={bag4} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={80} height={80} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXjEEHriFlzX0c2DFUWOWITHZKJzFZWt6ybg&s" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
        <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">اکسسوری ها</p></NavLink>
@@ -75,7 +75,7 @@ function Banner() {
        <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[230px]  mb-5" >       
          <div  className=" flex flex-row justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={150} height={150} src={bag1} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={150} height={150} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdRRnIXTsawD_0UkCHXvz9uyq2Osm1MwQpQ&s" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">کیف ها</p>
@@ -84,7 +84,7 @@ function Banner() {
         <div data-aos="zoom-out-right"  className="   flex flex-col justify-center items-center h-[230px]  mb-5" >       
          <div  className=" flex flex-row justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={150} height={150} src={bag2} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={150} height={150} src="https://img.clipart-library.com/2/clip-suitcases/clip-suitcases-18.jpg" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">چمدان ها</p>
@@ -92,7 +92,7 @@ function Banner() {
         <div data-aos="flip-left"  className="   flex flex-col justify-center items-center h-[230px]  mb-5" >       
          <div  className=" flex flex-row justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={150} height={150} src={bag3} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={150} height={150} src="https://static.vecteezy.com/system/resources/previews/021/919/917/non_2x/women-s-shoes-with-heels-wedding-accessory-in-cartoon-style-illustration-isolated-on-white-vector.jpg" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">کفش ها</p>
@@ -100,7 +100,7 @@ function Banner() {
         <div data-aos="zoom-out-right" className="   flex flex-col justify-center items-center h-[230px]  mb-5" >       
          <div  className=" flex flex-row justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={150} height={150} src={bag4} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={150} height={150} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXjEEHriFlzX0c2DFUWOWITHZKJzFZWt6ybg&s" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
        <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">اکسسوری ها</p></NavLink>
@@ -116,7 +116,7 @@ function Banner() {
        <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[250px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={280} height={220} src={bag1} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={280} height={220} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdRRnIXTsawD_0UkCHXvz9uyq2Osm1MwQpQ&s" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">کیف ها</p>
@@ -125,7 +125,7 @@ function Banner() {
         <div data-aos="zoom-out-right"  className="   flex flex-col justify-center items-center h-[250px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={280} height={220} src={bag2} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={280} height={220} src="https://img.clipart-library.com/2/clip-suitcases/clip-suitcases-18.jpg" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">چمدان ها</p>
@@ -133,7 +133,7 @@ function Banner() {
         <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[250px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={280} height={220} src={bag3} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={280} height={220} src="https://static.vecteezy.com/system/resources/previews/021/919/917/non_2x/women-s-shoes-with-heels-wedding-accessory-in-cartoon-style-illustration-isolated-on-white-vector.jpg" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">کفش ها</p>
@@ -141,7 +141,7 @@ function Banner() {
         <div data-aos="zoom-out-right"  className="   flex flex-col justify-center items-center h-[250px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={280} height={220} src={bag4} alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={280} height={220} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXjEEHriFlzX0c2DFUWOWITHZKJzFZWt6ybg&s" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
        <NavLink to={"/about"}  > <p className="text-xl hover:text-[#281e5d] text-[#ba4008] md:py-2 font-black">اکسسوری ها</p></NavLink>
