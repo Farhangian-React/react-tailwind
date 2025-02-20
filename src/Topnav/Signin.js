@@ -2,7 +2,6 @@
 import React, {useState} from 'react';
 import {  useNavigate } from 'react-router-dom';
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { ToastContainer, toast } from "react-toastify";
@@ -11,8 +10,6 @@ import Input from '@mui/joy/Input';
 import Grid from "@mui/material/Grid";
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
-import { GoSignIn } from "react-icons/go";
-import { GrBasket } from "react-icons/gr";
 import {Typography} from "@material-tailwind/react";
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -21,7 +18,6 @@ import { NavLink } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import lego from "../img/bag.png";
 import "./Nav.css";
-import { styled, useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 
 function Signin() {
@@ -108,9 +104,9 @@ navigate("/")
 
 
 <Dialog
+sx={{width:"90vw"}}
         open={opendialog}
         keepMounted
-        minWidth="sm"
         onClose={handleClosedialog}
         aria-describedby="alert-dialog-slide-description"
       >
@@ -128,7 +124,7 @@ navigate("/")
 </div></NavLink> </div>
         </DialogTitle>
         <DialogContent>
-        <Box   sx={{width:{xs:"400px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
+        <Box   sx={{display:"flex",justifyContent:"start",flexDirection:"column",my:2,
     bgcolor:'white',direction:'rtl'}}
     
     > 

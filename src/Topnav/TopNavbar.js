@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {  useNavigate } from 'react-router-dom';
-import Signup from './Signup';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Backdrop from '@mui/material/Backdrop';
@@ -8,7 +7,15 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { GoSignIn } from "react-icons/go";
 import { GrBasket } from "react-icons/gr";
 import NavbarMenuItem from './NavbarMenuItem';
-import {List,ListItem,Typography,Menu,MenuHandler, MenuList,MenuItem} from "@material-tailwind/react";
+import { FaAngleDown } from "react-icons/fa6";
+import {
+  ListItem,
+  List,
+  
+} from "@material-tailwind/react";
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import { NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
@@ -18,7 +25,6 @@ import Drawer from '@mui/material/Drawer';
 import Divider from '@mui/material/Divider';
 import ListItemButton from '@mui/material/ListItemButton';
 import IconButton from '@mui/material/IconButton';
-import { FaChevronDown } from "react-icons/fa6";
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -31,9 +37,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const drawerWidth = 340;
 function TopNavbar() {
   const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
-  const [opendialog, setOpendialog] = React.useState(false);
-  const [opendialog1, setOpendialog1] = React.useState(false);
   const [isLoading,setIsLoading]=useState(true);
   const [id,setId]=useState("");
   const [password,setPassword]=useState("");
@@ -42,7 +45,33 @@ function TopNavbar() {
   const [fname,setFname]=useState("");
   const [lname,setLname]=useState("");
   const [email,setEmail]=useState("");
- ;
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open1 = Boolean(anchorEl);
+  const handleClick1 = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose1 = () => {
+    setAnchorEl(null);
+  };
+  const [anchorE2, setAnchorE2] = React.useState(null);
+  const open2 = Boolean(anchorE2);
+  const handleClick2 = (event) => {
+    setAnchorE2(event.currentTarget);
+  };
+  const handleClose2 = () => {
+    setAnchorE2(null);
+  };
+  
+  const [anchorE3, setAnchorE3] = React.useState(null);
+  const open3 = Boolean(anchorE3);
+  const handleClick3= (event) => {
+    setAnchorE3(event.currentTarget);
+  };
+  const handleClose3 = () => {
+    setAnchorE3(null);
+  };
+
+
   const isvalidate1 = ()=>{
     let isvalid =true;
     let errmesage={};
@@ -163,23 +192,6 @@ const loading=()=>{
 navigate("/")
 }
  
-
-   const handleClickOpendialog = () => {
-     setOpendialog(true);
-   };
- 
-   const handleClosedialog = () => {
-     setOpendialog(false);
-   };
-  
-
-   const handleClickOpendialog1 = () => {
-    setOpendialog1(true);
-  };
-
-  const handleClosedialog1 = () => {
-    setOpendialog1(false);
-  };
  
    const handleDrawerOpen = () => {
      setOpen(true);
@@ -188,21 +200,12 @@ navigate("/")
    const handleDrawerClose = () => {
      setOpen(false);
    }; 
- 
-   const [isMenuOpen1, setIsMenuOpen1] =useState(false);
-   const [isMobileMenuOpen1, setIsMobileMenuOpen1] =useState(false);
-  
-   const [isMenuOpen2, setIsMenuOpen2] =useState(false);
-   const [isMobileMenuOpen2, setIsMobileMenuOpen2] =useState(false);
-  
-   const [isMenuOpen3, setIsMenuOpen3] =useState(false);
-   const [isMobileMenuOpen3, setIsMobileMenuOpen3] =useState(false);
 
  return (
   <>
   
 
-<nav dir='rtl' className='  relative flex justify-between w-screen bg-white h-[60px]  drop-shadow-lg pt-3  px-10 '>
+<nav dir='rtl' className='  relative flex justify-between w-screen bg-white h-[60px]  drop-shadow-lg pt-3  px-10  '>
 <div dir='ltr' className="w-2/3">
 	<form className="flex items-center">   
         <label for="simple-search" className="sr-only">Search</label>
@@ -255,20 +258,11 @@ className="block cursor-pointer shrink-0 rounded-lg p-2.5 border border-gray-100
 </a>
 </div>
 </div>
-
 </nav>
-    
    <nav dir='ltr' className='sticky top-0 hidden md:flex   z-20 mt-0 w-screen bg-white h-[70px] mx-auto   '>
-  
-    
-     
    <NavbarMenuItem/>
-
-  
 </nav>
-
 <nav dir="rtl" className= " flex  border-b-red-600 md:hidden w-screen bg-white h-[60px] px-10  justify-between items-center ">
-
 <div className="   flex items-center ">
 <button  onClick={handleDrawerOpen} className="inline-flex items-center justify-center p-2 rounded-md text-gray-900  hover:bg-orange-500 hover:text-indigo-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
       <span className="sr-only">Open main menu</span>
@@ -279,9 +273,6 @@ className="block cursor-pointer shrink-0 rounded-lg p-2.5 border border-gray-100
       )}
     </button>
 </div>
-
-
-
 <Drawer
 sx={{
 width: drawerWidth,
@@ -296,7 +287,7 @@ open={open}
 dir='ltr'
 >
 <DrawerHeader >
-  <div className=' flex justify-between w-full'>
+  <div className=' flex justify-between w-full '>
  
 <IconButton onClick={handleDrawerClose} sx={{py:0 ,':hover':{bgcolor:"white"}}} >
 <IoClose className="block h-6 w-6 text-black hover:text-orange-500 "  />
@@ -310,277 +301,106 @@ dir='ltr'
 </div>
 </DrawerHeader>
 <Divider />
-<List  className='flex justify-start text-right self-end'>
+<div className='flex flex-col justify-start'>
 
-<Menu
-        open={isMenuOpen1}
-        handler={setIsMenuOpen1}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      
-      >
-        <MenuHandler>
-        <ListItem dir='rtl'
-              className=" w-[320px] flex flex-row justify-between items-start text-right gap-2 py-5 mr-4 pr-6 font-medium text-sm rounded-none
-               text-gray-900  hover:text-orange-500"
-              selected={isMenuOpen1 || isMobileMenuOpen1}
-              onClick={() => setIsMobileMenuOpen1((cur) => !cur)}
-            >
-              <Typography> کیف</Typography>
-               <FaChevronDown
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform md:hidden  mt-2  ${
-                  isMenuOpen1 ? "rotate-180" : ""
-                }`}
-              />
-              <FaChevronDown
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform md:block  mt-2 ${
-                  isMobileMenuOpen1 ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-         
+      <Button
+      width="340px"
+        id="basic-button"
+        aria-controls={open1 ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open1 ? 'true' : undefined}
+        onClick={handleClick1}
+        sx={{color:"black",width:"340px",alignSelf:"start",display:"flex",justifyContent:"space-between",direction:"rtl",px:3,fontSize:"18px"}}
+    
+      > 
+   
+        کفش
+         <FaAngleDown className='mt-2 '/>
+          </Button>
+    
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open1}
+        onClose={handleClose1}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
        
-          
-        </MenuHandler>
-        <MenuList className="block max-w-screen-xl rounded-xl md:hidden w-[310px] h-auto p-3 -mt-5">
-          <ul className=" flex flex-col items-end outline-none outline-0">
-          <NavLink to={"/about"}  >
-        <MenuItem className="flex items-center pb-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-            همه ی کیف ها
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-             کیف دستی
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-             کیف دوشی
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-            کوله پشتی
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-             کیف پول
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-             کیف اسپورت
-            </Typography>
-        </MenuItem>
-      </NavLink>
-          </ul>
-        </MenuList>
-      </Menu>
-
-      <Menu
-        open={isMenuOpen2}
-        handler={setIsMenuOpen2}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      
+        }}  
+        sx={{ml:2}}
       >
-        <MenuHandler>
-        <ListItem dir='rtl'
-              className=" w-[320px] flex flex-row justify-between items-start text-right gap-2 py-5 mr-4 pr-6 font-medium text-sm rounded-none
-               text-gray-900  hover:text-orange-500"
-              selected={isMenuOpen1 || isMobileMenuOpen1}
-              onClick={() => setIsMobileMenuOpen1((cur) => !cur)}
-            >
-              <Typography> کفش</Typography>
-               <FaChevronDown
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform md:hidden  mt-2  ${
-                  isMenuOpen1 ? "rotate-180" : ""
-                }`}
-              />
-              <FaChevronDown
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform md:block  mt-2 ${
-                  isMobileMenuOpen1 ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-        </MenuHandler>
-        <MenuList className="block max-w-screen-xl rounded-xl md:hidden w-[310px] h-auto p-3  -mt-5">
-          <ul className=" flex flex-col items-end outline-none outline-0">
-          <NavLink to={"/about"}  >
-        <MenuItem className="flex items-center pb-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-            همه ی کفش ها
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-           کالج
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-           صندل
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-            بوت
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-            مجلسی
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-              اسپورت
-            </Typography>
-        </MenuItem>
-      </NavLink>
-          </ul>
-        </MenuList>
+        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>همه ی کفش ها</MenuItem></NavLink>
+        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>کالج</MenuItem></NavLink>
+        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>صندل</MenuItem></NavLink>
+        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>مجلسی</MenuItem></NavLink>
+        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}> بوت</MenuItem></NavLink>
+        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>اسپورت</MenuItem></NavLink>
       </Menu>
-
-         
-           
-
-      <Menu
-        open={isMenuOpen3}
-        handler={setIsMenuOpen3}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
       
+      <Button
+      width="340px"
+        id="basic-button"
+        aria-controls={open2 ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open2 ? 'true' : undefined}
+        onClick={handleClick2}
+        sx={{color:"black",width:"340px",alignSelf:"start",display:"flex",justifyContent:"space-between",direction:"rtl",px:3,fontSize:"18px"}}
+    
+      > 
+   
+        کیف
+         <FaAngleDown className='mt-2 '/>
+          </Button>
+    
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorE2}
+        open={open2}
+        onClose={handleClose2}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+        sx={{ml:2}}
       >
-        <MenuHandler>
-        <ListItem dir='rtl'
-              className=" w-[320px] flex flex-row justify-between items-start text-right gap-2 py-5 mr-4 pr-6 font-medium text-sm rounded-none
-               text-gray-900  hover:text-orange-500"
-              selected={isMenuOpen1 || isMobileMenuOpen1}
-              onClick={() => setIsMobileMenuOpen1((cur) => !cur)}
-            >
-              <Typography> اکسسوری</Typography>
-               <FaChevronDown
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform md:hidden  mt-2  ${
-                  isMenuOpen1 ? "rotate-180" : ""
-                }`}
-              />
-              <FaChevronDown
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform md:block  mt-2 ${
-                  isMobileMenuOpen1 ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-        </MenuHandler>
-        <MenuList className="block max-w-screen-xl rounded-xl lg:hidden w-[310px] h-auto p-3  -mt-5">
-          <ul className=" flex flex-col items-end outline-none outline-0">
-          <NavLink to={"/about"}  >
-        <MenuItem className="flex items-center pb-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-          عینک آفتابی
-            </Typography>
-        </MenuItem>
-      </NavLink>
-      <NavLink href="#" >
-        <MenuItem className="flex items-center py-2 rounded-lg">
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold hover:text-orange-500"
-            >
-           عطر و ادکلن
-            </Typography>
-        </MenuItem>
-      </NavLink>
-          </ul>
-        </MenuList>
+       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>همه ی کیف ها</MenuItem></NavLink>
+       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کیف دستی</MenuItem></NavLink>
+       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کیف دوشی</MenuItem></NavLink>
+       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کوله پشتی</MenuItem></NavLink>
+       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}> کیف پول</MenuItem></NavLink>
+       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>اسپورت</MenuItem></NavLink>
       </Menu>
-
-</List>
+      
+      <Button
+      width="340px"
+        id="basic-button"
+        aria-controls={open3 ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open3 ? 'true' : undefined}
+        onClick={handleClick3}
+        sx={{color:"black",width:"340px",alignSelf:"start",display:"flex",justifyContent:"space-between",direction:"rtl",px:3,fontSize:"18px"}}
+    
+      > 
+   
+        اکسسوری
+         <FaAngleDown className='mt-2 '/>
+          </Button>
+    
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorE3}
+        open={open3}
+        onClose={handleClose3}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+        sx={{ml:2}}
+      >
+         <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>همه ی اکسسوری ها</MenuItem></NavLink>
+         <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>عینک</MenuItem></NavLink>
+         <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>عطر و ادکلن</MenuItem></NavLink>
+       
+      </Menu>
+</div>
 <Divider/>
 <List  className='flex justify-start text-right'>
   <NavLink to={"/about"}>

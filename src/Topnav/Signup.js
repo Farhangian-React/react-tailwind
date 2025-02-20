@@ -101,9 +101,9 @@ fetch("https://serverjson-project.onrender.com/nahallusers",{
     <>
 
 <Dialog
+sx={{width:"90vw"}}
         open={opendialog}
         keepMounted
-        minWidth="sm"
         onClose={handleClosedialog}
         aria-describedby="alert-dialog-slide-description"
       >

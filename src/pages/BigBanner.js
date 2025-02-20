@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useEffect,useState } from 'react';
+import banerimg from "../img/bigbaner.png";
 import { Typography } from '@mui/joy';
 import { NavLink } from 'react-router-dom';
 export default function BigBanner() {
@@ -23,11 +24,11 @@ export default function BigBanner() {
         };
         const returnPhotoURL=()=>{
           switch(photo){
-            case 1: return 'https://cadenza.ir/panel//Uploads/5/8/8/985581dd-06df-4b81-ba1d-b1c367d8a932.webp';
-            case 2: return 'https://cadenza.ir/panel//Uploads/2/6/3/47241399-ca18-43ca-a01d-78c247dde407.webp';
-            case 3: return "https://cadenza.ir/panel//Uploads/3/4/1/90de7fc7-2f2d-446b-bcad-64f620cccc07.webp";
-            case 4: return " https://cadenza.ir/panel//Uploads/9/8/2/5b50075f-3520-4ef3-b25d-5f3bf3844be9.webp";
-            case 5: return " https://cadenza.ir/panel//Uploads/6/5/2/eb341aa3-e8ff-4c53-8031-f7ffebe50b40.webp";
+            case 1: return "";
+            case 2: return "";
+            case 3: return "";
+            case 4: return "";
+            case 5: return "";
             default: return null;
           }
        
@@ -35,7 +36,9 @@ export default function BigBanner() {
         
   return (
     <>
-  
+  <div className= 'flex flex-col  justify-center    bg-cover bg-center bg-no-repeat h-[30vh] md:h-[50vh] lg:h-screen mt-2'  style={{
+                   backgroundImage: `url(${banerimg})`,
+                 }} >
       
          <Box 
       sx={{
@@ -61,9 +64,8 @@ export default function BigBanner() {
          
          </Box>
       </Box>
-     
-    
+     </div>
+  </>
 
-    </>
   );
       }
