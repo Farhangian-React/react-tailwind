@@ -37,7 +37,7 @@ export default function BigBanner() {
   return (
     <>
   <div className= 'flex flex-col  justify-center    bg-cover bg-center bg-no-repeat h-[30vh] md:h-[50vh] lg:h-screen mt-2'  style={{
-                   backgroundImage: `url(${banerimg})`,
+                   backgroundImage: `url("https://media.istockphoto.com/id/185007737/photo/dark-blue-grunge-background.jpg?s=612x612&w=0&k=20&c=YIHLCULIeavPuYWz16ecgycBWdZn7XbB0qMjoi9r9p8=")`,
                  }} >
       
          <Box 
