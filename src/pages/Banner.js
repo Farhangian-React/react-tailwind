@@ -1,9 +1,5 @@
 import React from "react";
 import { useEffect } from "react";
-import bag1 from "../img/banner300(1).png";
-import bag2 from "../img/ach1(1).png";
-import bag3 from "../img/aashose(1).png";
-import bag4 from "../img/aai1(1).png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { NavLink } from "react-router-dom";
