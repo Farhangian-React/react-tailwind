@@ -1,9 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useEffect,useState } from 'react';
-import banerimg from "../img/bigbaner.png";
-import { Typography } from '@mui/joy';
-import { NavLink } from 'react-router-dom';
 export default function BigBanner() {
   const [photo,setPhoto]=useState(1);
   const [type,setType]=useState(1);
