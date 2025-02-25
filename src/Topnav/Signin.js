@@ -56,7 +56,7 @@ errmesage.password="لطفا رمز را وارد کنید";
     
 e.preventDefault();
 if(isvalidate()){
-fetch("https://serverjson-project.onrender.com/nahallusers/"+id).then((res)=>{
+fetch("https://servers-nahall.onrender.com/nahallusers/"+id).then((res)=>{
   return res.json();
 }).then((resp)=>{
   if(Object.keys(resp).length===0){

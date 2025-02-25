@@ -18,7 +18,7 @@ function Shegeftangiz() {
   const [data,setData]=useContext(CardData);
   const [datashow,setDatashow]=useContext(CardDataShow);
   const getData=()=>{
-    fetch('https://serverjson-project.onrender.com/Allproductsnahall' )
+    fetch('https://servers-nahall.onrender.com/Allproductsnahall' )
     .then(res => res.json())
     .then((result)=> {
     setData(result);

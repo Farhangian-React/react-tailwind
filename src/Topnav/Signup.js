@@ -72,7 +72,7 @@ e.preventDefault();
 let result={id,fname,lname,email,password};
   if(isvalidate()){
 //console.log(result);
-fetch("https://serverjson-project.onrender.com/nahallusers",{
+fetch("https://servers-nahall.onrender.com/nahallusers",{
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

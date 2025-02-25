@@ -10,7 +10,7 @@ export const Stores = () => {
    
   return (
  <>
-    <PageTitle title=' فروشگاه های سهیل '   description=' سهیل '/>
+    <PageTitle title=' فروشگاه های نهال شاپ '   description=' نهال شاپ '/>
 
  <div className='flex flex-col justify-center self-center w-full bg-slate-50 my-20 h-1/3'>
  <div dir="rtl" className='flex flex-row justify-between mx-auto mt-1 w-full py-3
