@@ -34,10 +34,8 @@ import FormLabel from '@mui/joy/FormLabel';
 import { Textarea } from '@mui/joy';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -50,13 +48,11 @@ function CustomTabPanel(props) {
     </div>
   );
 }
-
 CustomTabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -64,8 +60,6 @@ function a11yProps(index) {
   };
 }
 export default function CartBuyShose() { 
-
-
   const [layout, setLayout] = React.useState(undefined);
   const [cartItems,setCartItems]=useContext(CartContext);
   const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext); 
@@ -82,18 +76,13 @@ export default function CartBuyShose() {
   const buttoncommentref=useRef();
   const boxnotcomments=useRef();
   const displycomments=useRef();
-
   const [opendialog, setOpendialog] = React.useState(false);
-
   const handleClickOpendialog = () => {
     setOpendialog(true);
   };
-
   const handleClosedialog = () => {
     setOpendialog(false);
   };
- 
-
   const convertToEnglish=(str)=> {
     let englishNumber =str
     .replace(/۰/g, '0')
@@ -106,11 +95,9 @@ export default function CartBuyShose() {
     .replace(/۷/g, '7')
     .replace(/۸/g, '8')
     .replace(/۹/g, '9');
-
  return(englishNumber);
   }
   const convertToPersian=(str)=> {
-   
     let persianNumber =str
     .replace(/0/g, '۰')
     .replace(/1/g, '۱')
@@ -125,7 +112,6 @@ export default function CartBuyShose() {
 return(persianNumber);
   }
   const addCommas=(nStr)=>{
-  
     if(nStr.length === 7){
       return  nStr.substring(0,1) + "," + nStr.substring(1, 4) + "," + nStr.substring(4, 7);
     }
@@ -190,7 +176,6 @@ useEffect(()=>{
       return cartItems;
     }
       )
-
     }
        )
     .catch(err=>toast.error(err))
@@ -201,8 +186,6 @@ useEffect(()=>{
     return console.log(cartItems);
   })  
   },[cartItems])
-  
-
   const handlesubmit=(e)=>{
     e.preventDefault();
     if(isvalidate()){
@@ -228,7 +211,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
   const addToCart=(p)=>{ 
     setCartItems([p]);  
    if(cartItemsBuy.includes(p)){
@@ -241,7 +223,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
    }
    setOpen(true);
     } 
-
   return(
     <>
      {cartItems.map(i=>
@@ -263,19 +244,16 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       <p className='text-gray-600 text-xs py-1  px-1 ' > کفش /
        </p><p className='text-indigo-800  text-sm '  >{i.title1} </p>
     </Box>
-    
     )}
      {cartItems.map(i=>
     <Box container sx={{display:{xs:"none",md:"flex"},flexDirection:"row",bgcolor:'white',mx:{xs:1,md:5},my:2,borderRadius:'10px',direction:'rtl'}}>
       <p className='text-gray-600 text-sm py-1 px-2' >محصولات / کفش /
        </p><p className='text-indigo-800  text-md'  >{i.title1} </p>
     </Box>
-    
     )}
    <div dir='rtl' class="grid grid-cols-1 gap-5 lg:grid-cols-2 w-[95%] bg-white rounded-xl mx-auto ">
    <Box   sx={{mt:1, mx:{xs:1,lg:3},display:'flex',flexDirection:"column",justifyContent:'start',alignSelf:{xs:"center",lg:"start"},direction:'rtl'}} >
        <Box  sx={{mx:{xs:0,lg:2},mt:{xs:2,lg:4},pt:{lg:1},display:'flex',alignItems:'center',justifyContent:'center'}} >
-
           <Box 
            sx={{
             display:"flex",
@@ -290,17 +268,12 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
             }}
           >
             </Box>  
-
-      
         </Box>
         {cartItems.map(i=>
          <div className="inline md:hidden mx-auto py-5 px-2 w-full  md:w-full  h-[150px] ">
-   
         <Slide  slidesToScroll={1} slidesToShow={3} indicators={false}   >
         {i.imgslid.map(j=>
          <Link onClick={()=>setImage(j.imga)}>
-
-          
 <Box  
        sx={{
         display:"flex",
@@ -317,17 +290,13 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         </Link>
           )} 
         </Slide>
-     
         </div>
       )}
       {cartItems.map(i=>
          <div className="hidden md:inline mx-auto py-5 px-10 w-[90%]  md:w-full  h-[150px] ">
-   
         <Slide  slidesToScroll={1} slidesToShow={4} indicators={false}   >
         {i.imgslid.map(j=>
          <Link onClick={()=>setImage(j.imga)}>
-
-          
 <Box  
        sx={{
         display:"flex",
@@ -344,7 +313,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         </Link>
           )} 
         </Slide>
-     
         </div>
       )}
         </Box> 
@@ -364,18 +332,15 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
           <div dir="ltr" className='flex flex-row justify-end  mx-2' >
          <div className='flex justify-center items-center rounded-full  h-[20px] w-[120px] mb-2'  > 
          <p className='text-md text-gray-800 text-center  line-through decoration-2 decoration-orange-500'>{i.price} </p></div>
-          
            <div  className='h-[20px] w-[40px] mb-2 flex  justify-center -mt-3'>
           <button    className='button1' type='submit' >  <span className='formbutton'>   {convertToPersian(i.off)}%  </span>   </button>
           </div>
           </div>
             <p className='text-2xl text-indigo-800 mt-1 text-right font-bold'   >
-       
             {addCommas(convertToPersian((convertToEnglish(i.pricenum)-(convertToEnglish(i.pricenum)*i.off / 100))+''))} تومان 
            </p>
            </div>
 :<p className='text-lg text-start text-indigo-800 font-bold '>{i.price}</p>}
-         
           {cartItems.map(i=>
           <div  className="flex w-full flex-row justify-center mt-5 ">
             <div className='flex flex-col justify-start w-full mx-3 '>
@@ -397,7 +362,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       </Select></div>
     </div>
           )}
-           
            <div className='flex flex-row justify-start my-1 md:my-2 mx-2' >
           <button onClick={()=> addToCart(i)}  className='button1' type='submit' >  <span className='formbutton'>   افزودن به سبد خرید  </span>
           </button>
@@ -428,7 +392,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
          <MdTimeline  sx={{fontSize:"32px"}}/>
          </IconButton>
     </Tooltip>
-        
     <Tooltip title=" مقایسه کالا ">
       <IconButton  sx={{pl:2,color:'black' }}>
         <MdAutoAwesomeMotion  sx={{fontSize:"32px"}}/>
@@ -438,15 +401,12 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       <IconButton  sx={{pl:2,color:'black' }}>
    <IoList  sx={{fontSize:"32px"}}/>
          </IconButton>
-    </Tooltip>
-         
+    </Tooltip>   
     </Box>
            </Box>
          )}
      </div>     
 </div>
-
-
 <div dir='rtl' class=" w-[95%] bg-white rounded-xl mx-auto my-3 ">
 <Tabs>
 <Tab label="مشخصات محصول">
@@ -467,7 +427,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 							adipisci amet laborum.
 						</p>
 					</div>
-          
 				</Tab>
 				<Tab label="نظرات کاربران">
 {cartItems.map(i=>
@@ -484,14 +443,9 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         <p  className='text-xs pt-1 text-slate-700'> برای ثبت نظر لازم است ابتدا وارد حساب کاربری خود شوید </p>
        </p>
     </div>
-
     <div dir="rtl" className=' mx-3 flex flex-row   self-center w-[90%] px-3 my-4'>
           <button ref={buttoncommentref} onClick={handleClickOpendialog}    className='button1' type='submit' >  <span className='formbutton'>  افزودن نظر  </span>   </button>
-
-         
-        
    <button ref={buttoncommentref} onClick={addcomments}  className='button1 mr-5' type='submit'  >  <span className='formbutton'> دیدگاه کاربران </span></button>
-
 </div>
 </div>
 <div className='bg-white flex flex-col justify-start md:justify-center self-start md:self-center h-[400px]'>
@@ -513,55 +467,28 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       <Typography sx={{fontSize:"16px",color:"#585858"}}>{j.comment}</Typography>
       <Box className='linetinck'></Box>
      </Typography>
-       )}
-       
+       )}     
    </Box>
 <Button ref={displycomments} onClick={displycomment}sx={{display:"none"}} >
   <p className='text-indigo-800 text-sm'>  ادامه ی نظرات...</p></Button> 
 </div>
 </div>
 )}
-     
 </Tab>
         </Tabs>
 </div>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <Dialog 
  sx={{width:"90vw"}}
         open={opendialog}
         keepMounted
-      
         onClose={handleClosedialog}
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle sx={{my:0, py:0 }}>
         <div className=' flex justify-between w-full'>
- 
  <IconButton onClick={handleClosedialog} sx={{py:0 ,':hover':{bgcolor:"white"}}} >
  <IoClose className="block h-6 w-6 text-black hover:text-orange-400 "  />
  </IconButton> 
-
-
         <NavLink to={"/"}>
       <div className="flex justify-center mx-2">
 <img src={lego} width={80} height={30}/>
@@ -570,7 +497,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         <DialogContent>
           <Box   sx={{width:{xs:"300px",sm:"400px",md:"500px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
     bgcolor:'white',direction:'rtl'}}
-    
     >   
     {cartItems.map(i=>
     <Box container sx={{mx:1,py:2,display:'flex',flexDirection:"column",bgcolor:'white',direction:'rtl'}}>
@@ -586,7 +512,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
               sx={{fontSize:"16px",
               boxshadow:"rgba(32, 4, 142, 0.65) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(32, 4, 142, 0.65) 0px -2px 6px 0px inset"
             }}
-       
             placeholder='   نام و نام خانوادگی'
                 autoComplete="email"
                 name='   نام و نام خانوادگی'
@@ -600,7 +525,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
                onChange={(e)=> setName(e.target.value)}
               />
               <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
-               
                 {error.name}
               </Typography>
             <Textarea
@@ -614,10 +538,8 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
              sx={{width:"100%",height:"170px",fontSize:"16px",
              boxshadow:"rgba(32, 4, 142, 0.65) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(32, 4, 142, 0.65) 0px -2px 6px 0px inset"}}
              ></Textarea>
-
                <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
-               {error.comment}
-              
+               {error.comment} 
              </Typography>
              <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}> امتیاز شما</FormLabel>
                 <Rating
@@ -631,12 +553,9 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       />
        <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
                {error.score}
-              
              </Typography>
           <div  className='w-full mx-auto flex flex-col justify-center my-2'>
-          <button    className='button1' type='submit' >  <span className='formbutton'> ثبت نظر  </span>   </button>
-
-         
+          <button    className='button1' type='submit' >  <span className='formbutton'> ثبت نظر  </span></button>
           </div> 
           </Box>
         </form>
@@ -645,17 +564,6 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       </Dialog>
 </Box>
     <Footer/>
-    
     </>
   );
-}
-
-
-
-
-
-
-
-  
-
-   
+}   
