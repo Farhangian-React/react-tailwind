@@ -11,7 +11,6 @@ function Homepage() {
   return (
     <>
   <TopNavbar/>
-    <BigBanner/>
    <Banner/>
    <Shegeftangiz/>
      

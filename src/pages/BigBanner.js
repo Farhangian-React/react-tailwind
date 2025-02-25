@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useEffect,useState } from 'react';
-import bb from '../img/charmbb.jpg';
+import bb from '../img/cham.webp';
 export default function BigBanner() {
   const [photo,setPhoto]=useState(1);
   const [type,setType]=useState(1);
