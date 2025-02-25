@@ -72,7 +72,7 @@ return(persianNumber);
 
 
 const getData1=()=>{
-  fetch("https://serverjson-project.onrender.com/Allcommentsnahall")
+  fetch("https://servers-nahall.onrender.com/Allcommentsnahall")
   .then((res)=>
      res.json())
      .then((data)=>{
