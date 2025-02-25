@@ -1,0 +1,65 @@
+.pagination{
+  list-style: none;
+ display: flex;
+ direction:ltr;
+ justify-content: center;
+ flex-grow: 10;
+ padding: 10px;
+
+
+ 
+
+}
+.paginationli{
+border: 1px solid #d4d4d4;
+font-size: medium;
+font-weight: 700;
+border-radius: 10px;
+ padding-left:10px ;
+ padding-right:10px ;
+ padding-top: 5px;
+ padding-bottom:5px ;
+ margin: 2px;
+ color: #3d3d3d;
+}
+.paginationli:hover{
+  scale: 1.1;
+  color:#F97316;
+  background-color:#3730A3;
+  background-image: none;
+  }
+.previousStyle{
+font-size: medium;
+font-weight: 700;
+border-radius: 10px;
+ border: 1px solid #d4d4d4;
+ color: black;
+align-self: center;
+padding:5px;
+margin: 2px;
+background-image: linear-gradient(to  right, oklch(0.954 0.038 75.164), oklch(0.93 0.034 272.788),oklch(0.954 0.038 75.164));
+ 
+}
+.previousStyle:hover{
+scale: 1.1;
+color:#F97316;
+background-color:#3730A3;
+background-image: none; 
+}
+.nextStyle{
+font-size: medium;
+font-weight: 700;
+border-radius: 10px;
+ border: 1px solid #d4d4d4;
+ color: black;
+ align-self: center;
+ padding:5px;
+ margin: 2px;
+background-image: linear-gradient(to  right, oklch(0.954 0.038 75.164), oklch(0.93 0.034 272.788),oklch(0.954 0.038 75.164));
+}
+.nextStyle:hover{
+scale: 1.1;
+color:#F97316;
+background-color:#3730A3;
+background-image: none;
+}
