@@ -60,7 +60,7 @@ return(persianNumber);
   }
   }
   const getData=()=>{
-    fetch("https://servers-nahall.onrender.com/Allcomments")
+    fetch("https://servers-nahall.onrender.com/Allcommentsnahall")
     .then((res)=>
        res.json())
        .then((data)=>{
