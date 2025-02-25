@@ -23,6 +23,8 @@ const Tabs = ({ children }) => {
 					>
 						{child.props.label}
 					</button>
+
+					
 				))}
 			</div>
 			<div className="py-4">
