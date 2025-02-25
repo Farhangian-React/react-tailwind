@@ -25,6 +25,7 @@
     "react-scripts": "5.0.1",
     "react-slideshow-image": "^4.2.1",
     "react-toastify": "^10.0.5",
+    "tw-elements-react": "^1.0.0-alpha-end",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

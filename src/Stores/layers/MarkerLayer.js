@@ -10,7 +10,7 @@ export const MarkerLayer = () => {
   const [datamapshow,setDatamapshow]=useContext(CardDatamapshow);
   const[isLoading,setIsLoading]=useState(true);
   const getData=()=>{
-fetch('https://serverjson-project.onrender.com/features' )
+fetch('https://servers-nahall.onrender.com/features' )
 .then(res => res.json())
 .then((result)=> {
 setDatamap(result);
@@ -35,14 +35,6 @@ console.log(datamap);
     return (
       <>
       {
-       isLoading ? 
-       <Backdrop
-       sx={(theme) => ({ color: '#fff', zIndex: theme.zIndex.drawer + 1 })}
-       open
-     >
-     <CircularProgress color="inherit" />
-     </Backdrop>
-     :
       datamapshow.map(f=>
       f.cities.map(c=>
         c.properties.map(p=>

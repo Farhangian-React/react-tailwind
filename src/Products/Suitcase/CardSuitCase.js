@@ -59,7 +59,7 @@ return(persianNumber);
   }
   }
   const getData=()=>{
-    fetch("https://serverjson-project.onrender.com/Allcomments")
+    fetch("https://servers-nahall.onrender.com/Allcomments")
     .then((res)=>
        res.json())
        .then((data)=>{
@@ -159,7 +159,7 @@ const [datashow,setDatashow]=useContext(CardDataShow);
 const [isLoading,setIsLoading]=useState(true);
 
 const getData=()=>{
-fetch('https://serverjson-project.onrender.com/Allproductsnahall' ).then((res)=>{
+fetch('https://servers-nahall.onrender.com/Allproductsnahall' ).then((res)=>{
   return res.json();
 }).then((result)=>{
   setData(result.filter(i=>i.product === "ch"));

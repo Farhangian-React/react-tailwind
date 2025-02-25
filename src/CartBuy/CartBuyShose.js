@@ -31,7 +31,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Input from '@mui/joy/Input';
 import FormLabel from '@mui/joy/FormLabel';
-import '../pages/pages.css';
 import { Textarea } from '@mui/joy';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -83,8 +82,7 @@ export default function CartBuyShose() {
   const buttoncommentref=useRef();
   const boxnotcomments=useRef();
   const displycomments=useRef();
-  const off=useRef();
-  const boxoff=useRef();
+
   const [opendialog, setOpendialog] = React.useState(false);
 
   const handleClickOpendialog = () => {
@@ -96,19 +94,6 @@ export default function CartBuyShose() {
   };
  
 
-  const offrefprice=()=>{
-    cartItems.map(i=>{
-      if(i.off === ""){
-     
-        boxoff.current.className="boxoff";
-return cartItems;
-      }
-      else{
-        off.current.className="off";
-        return console.log(cartItems);
-      }
-    }
-    )}
   const convertToEnglish=(str)=> {
     let englishNumber =str
     .replace(/۰/g, '0')
@@ -194,7 +179,7 @@ errmesage.score="لطفا  امتیاز خود را وارد کنید";
   }
 useEffect(()=>{
   cartItems.map(i=>{ 
-    fetch("https://serverjson-project.onrender.com/Allcommentsnahall")
+    fetch("https://servers-nahall.onrender.com/Allcommentsnahall")
     .then((res)=>
        res.json())
        .then((data)=>{
@@ -217,9 +202,7 @@ useEffect(()=>{
   })  
   },[cartItems])
   
-  useEffect(()=>{ 
-    offrefprice();
-  },[])
+
   const handlesubmit=(e)=>{
     e.preventDefault();
     if(isvalidate()){
@@ -227,7 +210,7 @@ useEffect(()=>{
       {cartItems.map(i=>{ 
         let idcomment=i.id;
   let result={idcomment,name,score,comment}
-  fetch("https://serverjson-project.onrender.com/Allcommentsnahall",{
+  fetch("https://servers-nahall.onrender.com/Allcommentsnahall",{
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
@@ -285,7 +268,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
      {cartItems.map(i=>
     <Box container sx={{display:{xs:"none",md:"flex"},flexDirection:"row",bgcolor:'white',mx:{xs:1,md:5},my:2,borderRadius:'10px',direction:'rtl'}}>
       <p className='text-gray-600 text-sm py-1 px-2' >محصولات / کفش /
-       </p><p className='text-indigo-800  text-lg'  >{i.title1} </p>
+       </p><p className='text-indigo-800  text-md'  >{i.title1} </p>
     </Box>
     
     )}
@@ -303,8 +286,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
             backgroundRepeat: 'no-repeat',
             height:{xs:"450px",sm:"650px"},
             width:"600px",
-           my:{xs:0},
-    
+           my:{xs:0}
             }}
           >
             </Box>  
@@ -377,20 +359,23 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
        value={sumscore()}
      />
          </div>
-        <div dir="ltr" className='flex flex-row justify-end  mx-2' >
+         { i.off !== "" ?
+         <div className='flex flex-col justify-start'>
+          <div dir="ltr" className='flex flex-row justify-end  mx-2' >
          <div className='flex justify-center items-center rounded-full  h-[20px] w-[120px] mb-2'  > 
-         <p ref={off} className='text-[14px]  mt-0 text-right'>{i.price} </p></div>
+         <p className='text-md text-gray-800 text-center  line-through decoration-2 decoration-orange-500'>{i.price} </p></div>
           
            <div  className='h-[20px] w-[40px] mb-2 flex  justify-center -mt-3'>
           <button    className='button1' type='submit' >  <span className='formbutton'>   {convertToPersian(i.off)}%  </span>   </button>
           </div>
           </div>
-          <div ref={boxoff} className='flex flex-row justify-start my-2 mx-2 '>
-          <p className='text-2xl text-indigo-800 mt-1 text-right font-bold'   >
+            <p className='text-2xl text-indigo-800 mt-1 text-right font-bold'   >
        
-          {addCommas(convertToPersian((convertToEnglish(i.pricenum)-(convertToEnglish(i.pricenum)*i.off / 100))+''))} تومان 
-         </p>
-          </div>  
+            {addCommas(convertToPersian((convertToEnglish(i.pricenum)-(convertToEnglish(i.pricenum)*i.off / 100))+''))} تومان 
+           </p>
+           </div>
+:<p className='text-lg text-start text-indigo-800 font-bold '>{i.price}</p>}
+         
           {cartItems.map(i=>
           <div  className="flex w-full flex-row justify-center mt-5 ">
             <div className='flex flex-col justify-start w-full mx-3 '>
@@ -513,7 +498,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 <Box  ref={boxnotcomments} sx={{display:"none"}}> <Typography variant='h6' sx={{color:"#585858",textAlign:"center",mx:5}}> دیدگاهی برای این محصول ثبت نشده است</Typography> 
        </Box>
      <Box ref={boxcommentref} sx={{ display:"none"}}>
-      <div dir="rtl" className='shadowcomments  my-1 w-1/3 '  >
+      <div dir="rtl" className='shadowcomments  my-1 w-2/3 '  >
       <p  className='text-lg font-bold text-slate-700 text-center' >دید گاه ها...
       </p>
      </div>
@@ -561,10 +546,11 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 
 
 
-<Dialog
+<Dialog 
+ sx={{width:"90vw"}}
         open={opendialog}
         keepMounted
-        minWidth="sm"
+      
         onClose={handleClosedialog}
         aria-describedby="alert-dialog-slide-description"
       >
@@ -582,7 +568,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 </div></NavLink> </div>
         </DialogTitle>
         <DialogContent>
-          <Box   sx={{width:{xs:"400px",md:"500px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
+          <Box   sx={{width:{xs:"300px",sm:"400px",md:"500px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
     bgcolor:'white',direction:'rtl'}}
     
     >   

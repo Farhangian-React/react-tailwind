@@ -29,12 +29,16 @@ export default function BigBanner() {
             default: return null;
           }
        
-        }; 
+        };
+        {/*
+          https://media.istockphoto.com/id/155154659/photo/seamless-torn-cardboard-edges.jpg?s=2048x2048&w=is&k=20&c=kBP1ER6m760T7db_BIuyy2Ar8cB-19LFeykgOA1p3Mk=
+
+          */} 
         
   return (
     <>
   <div className= 'flex flex-col  justify-center    bg-cover bg-center bg-no-repeat h-[30vh] md:h-[50vh] lg:h-screen mt-2'  style={{
-                   backgroundImage: `url("https://media.istockphoto.com/id/185007737/photo/dark-blue-grunge-background.jpg?s=612x612&w=0&k=20&c=YIHLCULIeavPuYWz16ecgycBWdZn7XbB0qMjoi9r9p8=")`,
+                   backgroundImage: `url("https://cdn.pixabay.com/photo/2016/08/05/09/31/banner-1571858_1280.jpg")`,
                  }} >
       
          <Box 

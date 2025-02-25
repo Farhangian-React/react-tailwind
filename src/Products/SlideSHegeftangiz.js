@@ -87,7 +87,7 @@ useEffect(()=>{
 
     return (
       <>
-      <div className="inline md:hidden mx-2 py-5 w-[95%]   px-2 h-[400px] mt-20  ">
+      <div className="inline sm:hidden mx-2 py-5 w-[95%]   px-2 h-[400px] mt-20  ">
         <Slide  slidesToScroll={1} slidesToShow={1} indicators={false}   >
          {data.map((item)=> (
            <NavLink to={"./buy"}>  <div
@@ -97,13 +97,14 @@ useEffect(()=>{
            key={item.id} className='flex justify-center items-center mx-auto px-0 backdrop-blur-lg rounded-3xl '>
              <div  className='bg-transparent relative w-[85%] h-[380px]  rounded-lg shadow-xl
              transition delay-150 duration-300 ease-in-out hover:h-[450px] overflow-hidden 
-             ' >
-
-                
-<div  className='shh relative w-full h-[345px] rounded-sm 
+             ' >   
+<div 
+                 className='shh relative w-full h-[340px] rounded-sm 
+                 bg-cover bg-center bg-no-repeat
                    before:absolute before:w-full before:h-[60px] before:bottom-[-12px] before:rounded-3xl before:bg-transparent
-                 '  > <img   src={item.img} alt="" className="xs:w-[90%] sm:w-[85%] h-[345px] mx-auto" 
-            style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/>   
+                 ' style={{
+                  backgroundImage: `url(${item.img})`,borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "
+                }} >  
                   </div>
                   
                   <div dir="rtl" className='relative top-[-40px] z-10 py-2 px-5 transition delay-150 duration-300 ease-in-out mt-5'>
@@ -117,17 +118,23 @@ useEffect(()=>{
       
      
               
-<div dir="rtl" className='flex justify-between items-baseline   border-b-2 border-gray-200 pb-1 mt-1'>
-  <div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
-    <p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
-  </div>
-  <div className='flex flex-col'>
-   
-    <p className='text-lg text-center text-indigo-800 font-bold'> 
-    {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
-    </p>
-  </div>
-</div> <p className='text-xs text-gray-600 text-center line-through decoration-gray-600'>{item.price}</p>
+
+      { item.off !== "" ?<div className='flex flex-col justify-center'>
+<div  dir="rtl" className='flex justify-between items-baseline border-b-2 border-gray-500 pb-1'>
+<div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
+<p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
+</div>
+<div   className='flex flex-col'>
+
+<p className='text-lg text-center text-indigo-800 font-bold'> 
+{addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
+</p>
+</div>
+
+</div>
+<p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
+</div>
+:<p className='text-lg text-center text-indigo-800 font-bold  '>{item.price}</p>}
                    </div>
               </div>
             </div>
@@ -135,7 +142,7 @@ useEffect(()=>{
           ))} 
         </Slide>
       </div>
-      <div className="hidden md:inline lg:hidden mx-15 py-5  w-5/8 px-5 h-[400px]  mt-20">
+      <div className="hidden sm:inline lg:hidden mx-15 py-5  w-5/8 px-5 h-[400px]  mt-20">
         <Slide  slidesToScroll={1} slidesToShow={2} indicators={false}   >
          {data.map((item)=> (
           <NavLink to={"./buy"}>  <div
@@ -145,13 +152,13 @@ useEffect(()=>{
             <div  className='bg-transparent relative w-[95%] h-[370px]  rounded-lg shadow-xl
              transition delay-150 duration-300 ease-in-out hover:h-[450px] overflow-hidden 
              ' >
-
-               
-
-                 <div  className='shh relative w-full h-[340px] rounded-sm 
+               <div 
+                 className='shh relative w-full h-[340px] rounded-sm 
+                 bg-cover bg-center bg-no-repeat
                    before:absolute before:w-full before:h-[60px] before:bottom-[-12px] before:rounded-3xl before:bg-transparent
-                 '  > <img   src={item.img} alt="" className="w-[95%] h-[320px] mx-auto" 
-            style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/>   
+                 ' style={{
+                  backgroundImage: `url(${item.img})`,borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "
+                }} >  
                   </div>    
                  <div dir="rtl" className='relative top-[-40px] z-10 py-8 px-5 transition delay-150 duration-300 ease-in-out'>
                    <p className='text-sm text-start text-gray-800 font-bold'> {item.title1}</p> 
@@ -161,17 +168,23 @@ useEffect(()=>{
         value={sumscore(item)}
       />
               
-<div dir="rtl" className='flex justify-between items-baseline   border-b-2 border-gray-200 py-3'>
-  <div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
-    <p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
-  </div>
-  <div className='flex flex-col'>
-   
-    <p className='text-lg text-center text-indigo-800 font-bold'> 
-    {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
-    </p>
-  </div>
-</div> <p className='text-xs text-gray-600 text-center line-through decoration-gray-600'>{item.price}</p>
+
+              { item.off !== "" ?<div className='flex flex-col justify-center'>
+<div  dir="rtl" className='flex justify-between items-baseline border-b-2 border-gray-500 pb-1'>
+<div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
+<p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
+</div>
+<div   className='flex flex-col'>
+
+<p className='text-lg text-center text-indigo-800 font-bold'> 
+{addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
+</p>
+</div>
+
+</div>
+<p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
+</div>
+:<p className='text-lg text-center text-indigo-800 font-bold '>{item.price}</p>}
                    </div>
               </div>
               
@@ -194,11 +207,15 @@ useEffect(()=>{
 
                
 
-                 <div  className='shh relative w-full h-[340px] rounded-sm 
+<div 
+                 className='shh relative w-full h-[340px] rounded-sm 
+                 bg-cover bg-center bg-no-repeat
                    before:absolute before:w-full before:h-[60px] before:bottom-[-12px] before:rounded-3xl before:bg-transparent
-                 '  > <img   src={item.img} alt="" className="w-[95%] h-[320px] mx-auto" 
-            style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/>   
-                  </div>    
+                 ' style={{
+                  backgroundImage: `url(${item.img})`,borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "
+                }} >  
+                  </div>
+                   
                  <div dir="rtl" className='relative top-[-40px] z-10 py-8 px-5 transition delay-150 duration-300 ease-in-out'>
                    <p className='text-sm text-start text-gray-800 font-bold'> {item.title1}</p> 
                    <Rating
@@ -207,17 +224,23 @@ useEffect(()=>{
         value={sumscore(item)}
       />
               
-<div dir="rtl" className='flex justify-between items-baseline   border-b-2 border-gray-200 py-3'>
-  <div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
-    <p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
-  </div>
-  <div className='flex flex-col'>
-   
-    <p className='text-lg text-center text-indigo-800 font-bold'> 
-    {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
-    </p>
-  </div>
-</div> <p className='text-xs text-gray-600 text-center line-through decoration-gray-600'>{item.price}</p>
+
+              { item.off !== "" ?<div className='flex flex-col justify-center'>
+<div  dir="rtl" className='flex justify-between items-baseline border-b-2 border-gray-500 pb-1'>
+<div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
+<p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
+</div>
+<div   className='flex flex-col'>
+
+<p className='text-lg text-center text-indigo-800 font-bold'> 
+{addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
+</p>
+</div>
+
+</div>
+<p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
+</div>
+:<p className='text-lg text-center text-indigo-800 font-bold  '>{item.price}</p>}
                    </div>
               </div>
               
@@ -237,13 +260,16 @@ useEffect(()=>{
              transition delay-150 duration-300 ease-in-out hover:h-[450px] overflow-hidden 
              ' >
 
-               
-
-                 <div  className='shh relative w-full h-[340px] rounded-sm 
+<div 
+                 className='shh relative w-full h-[340px] rounded-sm 
+                 bg-cover bg-center bg-no-repeat
                    before:absolute before:w-full before:h-[60px] before:bottom-[-12px] before:rounded-3xl before:bg-transparent
-                 '  > <img   src={item.img} alt="" className="w-[95%] h-[320px] mx-auto" 
-            style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/>   
-                  </div>    
+                 ' style={{
+                  backgroundImage: `url(${item.img})`,borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "
+                }} >  
+                  </div>
+
+                    
                  <div dir="rtl" className='relative top-[-40px] z-10 py-8 px-5 transition delay-150 duration-300 ease-in-out'>
                    <p className='text-sm text-start text-gray-800 font-bold'> {item.title1}</p> 
                    <Rating
@@ -252,17 +278,23 @@ useEffect(()=>{
         value={sumscore(item)}
       />
               
-<div dir="rtl" className='flex justify-between items-baseline   border-b-2 border-gray-200 py-3'>
-  <div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
-    <p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
-  </div>
-  <div className='flex flex-col'>
-   
-    <p className='text-lg text-center text-indigo-800 font-bold'> 
-    {addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
-    </p>
-  </div>
-</div> <p className='text-xs text-gray-600 text-center line-through decoration-gray-600'>{item.price}</p>
+
+              { item.off !== "" ?<div className='flex flex-col justify-center'>
+<div  dir="rtl" className='flex justify-between items-baseline border-b-2 border-gray-500 pb-1'>
+<div className='flex justify-center items-center rounded-full bg-orange-500 h-[20px] w-[40px] '>
+<p className='text-xs text-white font-bold text-center'>  {convertToPersian(item.off)}%</p>
+</div>
+<div   className='flex flex-col'>
+
+<p className='text-lg text-center text-indigo-800 font-bold'> 
+{addCommas(convertToPersian((convertToEnglish(item.pricenum)-(convertToEnglish(item.pricenum)*item.off / 100))+''))} تومان 
+</p>
+</div>
+
+</div>
+<p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
+</div>
+:<p className='text-lg text-center text-indigo-800 font-bold  '>{item.price}</p>}
                    </div>
               </div>
               

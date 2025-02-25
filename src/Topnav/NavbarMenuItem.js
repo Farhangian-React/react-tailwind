@@ -74,8 +74,7 @@ function NavbarMenuItem() {
                 همه ی محصولات
               </li>
             </NavLink>
-            <NavLink
-              to="/suitcase"
+            <NavLink to={"/suitcase"}
               style={({ isActive }) => ({
                 color: isActive ? "rgb(107, 33, 168)" : "#000",
                 textDecoration: "none",
@@ -124,7 +123,7 @@ function NavbarMenuItem() {
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl md:block w-1/6 h-auto p-3 -mt-5">
           <ul className=" flex flex-col items-end outline-none outline-0">
-          <NavLink to={"/about"}  >
+          <NavLink to={"/allbag"}  >
         <MenuItem className="flex items-center pb-2 rounded-lg">
             <Typography
               variant="h6"
@@ -231,7 +230,7 @@ function NavbarMenuItem() {
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl md:block w-1/6 h-auto p-3  -mt-5">
           <ul className=" flex flex-col items-end outline-none outline-0">
-          <NavLink to={"/about"}  >
+          <NavLink to={"/allshose"}  >
         <MenuItem className="flex items-center pb-2 rounded-lg">
             <Typography
               variant="h6"
@@ -340,6 +339,17 @@ function NavbarMenuItem() {
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl md:block w-1/6 h-auto p-3  -mt-5">
           <ul className=" flex flex-col items-end outline-none outline-0">
+          <NavLink to={"/allack"}  >
+        <MenuItem className="flex items-center pb-2 rounded-lg">
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="flex items-center text-sm font-bold hover:text-orange-500"
+            >
+          همه ی اکسسوری ها
+            </Typography>
+        </MenuItem>
+      </NavLink>
           <NavLink to={"/about"}  >
         <MenuItem className="flex items-center pb-2 rounded-lg">
             <Typography

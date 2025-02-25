@@ -101,13 +101,17 @@ color: aqua;
         clip-path: ellipse(50% 50% at 50% 50%);
 
       }
-  
+  .foterboxx{
+    height: 200px;
+    margin-top: 30px;
+    clip-path: ellipse(50% 50% at 50% 70%);
+  }
 
       .button1 {
         /* Variables */
         --button_radius: 0.75em;
-        --button_color:oklch(0.257 0.09 281.288);
-        --button_outline_color:oklch(0.75 0.183 55.934);
+        --button_color:#F97316 ;
+        --button_outline_color:#3730A3;
         font-size:20px;
         font-weight: bold;
         margin-top: 10px;
@@ -143,6 +147,44 @@ color: aqua;
         /* Push the button downwards when pressed */
         transform: translateY(0);
       }
-
-
-        
+   
+      
+      .button2 {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color:linear-gradient(to  right, oklch(0.954 0.038 75.164), oklch(0.93 0.034 272.788),oklch(0.954 0.038 75.164));
+        --button_outline_color:oklch(0.257 0.09 281.288);
+        font-size:20px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+       
+      }
+      .formbutton2 {
+        display: flex;
+        box-sizing:border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 3em 3em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+      font-size: medium;
+       
+      }
+      
+      .button2:hover .formbutton {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+      }
+      
+      .button2:active .formbutton {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+      }
+   

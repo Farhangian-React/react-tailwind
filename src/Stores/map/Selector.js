@@ -17,7 +17,7 @@ export default function Selector() {
   const [datamapshow,setDatamapshow]=useContext(CardDatamapshow);
   const [dataselactor,setDataselactor]=useState([]);
   const getData=()=>{
-    fetch('https://serverjson-project.onrender.com/features' )
+    fetch('https://servers-nahall.onrender.com/features' )
 .then(res => res.json())
 .then((result)=> {
 setDataselactor(result);
@@ -72,9 +72,10 @@ setDatamapshow([t]);
   <div dir="rtl" className='flex flex-row justify-center rounded-xl  bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100 
    py-0 md:py-2 px-0 sm:px-3 md:px-5 mx-0 md:mx-1 '
   >
-    <FormControl  dir='rtl' variant="standard" sx={{ my:1,mx:{xs:1,md:5}, minWidth: 120, }}>
+    <FormControl   dir='rtl' variant="standard" sx={{ my:1,mx:{xs:1,md:5}, minWidth: 120, }}>
         <InputLabel  id="demo-simple-select-standard-label"> انتخاب استان</InputLabel>
         <Select
+   
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
         value={fromostan.name}

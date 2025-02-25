@@ -124,7 +124,7 @@ sx={{width:"90vw"}}
 </div></NavLink> </div>
         </DialogTitle>
         <DialogContent>
-        <Box   sx={{width:{xs:"400px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
+        <Box   sx={{width:{xs:"300px",sm:"400px",md:"500px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
     bgcolor:'white',direction:'rtl'}}
     
     > 

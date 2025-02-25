@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Homepage from "./pages/home";
-import Portfolio from "./pages/portfolio";
+import Home from "./Home";
 import NoPage from "./pages/nopage";
 import Stores from "./Stores/Stores";
 import {CartProvider} from './Shared/Cart-Context';
@@ -11,8 +10,13 @@ import Shegeftangiz from "./pages/Shegeftangiz";
 import CartBuyShose from "./CartBuy/CartBuyShose";
 import DialogSizes from "./CartBuy/DialogSizes";
 import Signin from "./Topnav/Signin";
+import AllShose from "./Products/Shose/AllShose";
 import Signup from "./Topnav/Signup";
 import SuitCase from "./Products/Suitcase/SuitCase";
+import SigninXs from "./Topnav/SigninXs";
+import AllBag from "./Products/Bag/AllBag";
+import AllAck from "./Products/Acksosory/AllAck";
+import Homepage from "./pages/Homepage";
 function App() {
   return (
     <>     <CartProvider>
@@ -21,9 +25,12 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/buy" element={<CartBuyShose />} />
           <Route path="/suitcase" element={<SuitCase />} />
+          <Route path="/allbag" element={<AllBag />} />
+          <Route path="/allshose" element={<AllShose />} />
+          <Route path="/allack" element={<AllAck />} />
+          <Route path="/signinxs" element={<SigninXs />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="*" element={<NoPage />} />
           <Route path='/dialogSizes' exact element={<DialogSizes/>} />
           <Route path='/Stores' exact element={<Stores/>} />
