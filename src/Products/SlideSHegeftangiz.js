@@ -109,7 +109,7 @@ useEffect(()=>{
                   
                   <div dir="rtl" className='relative top-[-40px] z-10 py-2 px-5 transition delay-150 duration-300 ease-in-out mt-5'>
                   
- <p className='text-sm text-start text-gray-800 font-bold'> {item.title1}</p> 
+ <p className='text-sm text-start text-gray-800 font-bold pb-6'> {item.title1}</p> 
                    <Rating
          sx={{color:"#f5cd00",fontSize:"14px",alignItems:"start"}}
         name="simple-controlled"
@@ -134,7 +134,7 @@ useEffect(()=>{
 </div>
 <p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
 </div>
-:<p className='text-lg text-center text-indigo-800 font-bold  '>{item.price}</p>}
+:<p className='text-lg text-start text-indigo-800 font-bold  '>{item.price}</p>}
                    </div>
               </div>
             </div>
@@ -161,7 +161,7 @@ useEffect(()=>{
                 }} >  
                   </div>    
                  <div dir="rtl" className='relative top-[-40px] z-10 py-8 px-5 transition delay-150 duration-300 ease-in-out'>
-                   <p className='text-sm text-start text-gray-800 font-bold'> {item.title1}</p> 
+                   <p className='text-sm text-start text-gray-800 font-bold pb-6'> {item.title1}</p> 
                    <Rating
          sx={{color:"#f5cd00",fontSize:"14px",alignItems:"start"}}
         name="simple-controlled"
@@ -184,7 +184,7 @@ useEffect(()=>{
 </div>
 <p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
 </div>
-:<p className='text-lg text-center text-indigo-800 font-bold '>{item.price}</p>}
+:<p className='text-lg text-start text-indigo-800 font-bold '>{item.price}</p>}
                    </div>
               </div>
               
@@ -217,7 +217,7 @@ useEffect(()=>{
                   </div>
                    
                  <div dir="rtl" className='relative top-[-40px] z-10 py-8 px-5 transition delay-150 duration-300 ease-in-out'>
-                   <p className='text-sm text-start text-gray-800 font-bold'> {item.title1}</p> 
+                   <p className='text-sm text-start text-gray-800 font-bold pb-6'> {item.title1}</p> 
                    <Rating
          sx={{color:"#f5cd00",fontSize:"14px",alignItems:"start"}}
         name="simple-controlled"
@@ -240,7 +240,7 @@ useEffect(()=>{
 </div>
 <p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
 </div>
-:<p className='text-lg text-center text-indigo-800 font-bold  '>{item.price}</p>}
+:<p className='text-lg text-start text-indigo-800 font-bold  '>{item.price}</p>}
                    </div>
               </div>
               
@@ -249,7 +249,7 @@ useEffect(()=>{
           ))} 
         </Slide>
       </div>
-      <div className="hidden xl:inline mx-10 py-5  w-5/8 px-5 h-[400px]  mt-20">
+      <div className="hidden xl:inline mx-10 py-5  w-5/8 px-5 h-[400px] bg-white  mt-20">
         <Slide  slidesToScroll={1} slidesToShow={4} indicators={false}   >
         {data.map((item)=> (
           <NavLink to={"./buy"}>  <div
@@ -257,8 +257,8 @@ useEffect(()=>{
             setCartItems([item]);
            }} key={item.id} className='flex justify-center items-center mx-auto px-0 backdrop-blur-lg rounded-3xl '>
             <div  className='bg-transparent relative w-[95%] h-[370px]  rounded-lg shadow-xl
-             transition delay-150 duration-300 ease-in-out hover:h-[450px] overflow-hidden 
-             ' >
+             transition delay-150 duration-300 ease-in-out hover:h-[480px] overflow-hidden 
+             bg-white' >
 
 <div 
                  className='shh relative w-full h-[340px] rounded-sm 
@@ -271,7 +271,7 @@ useEffect(()=>{
 
                     
                  <div dir="rtl" className='relative top-[-40px] z-10 py-8 px-5 transition delay-150 duration-300 ease-in-out'>
-                   <p className='text-sm text-start text-gray-800 font-bold'> {item.title1}</p> 
+                   <p className='text-sm text-start text-gray-800 font-bold pb-6'> {item.title1}</p> 
                    <Rating
          sx={{color:"#f5cd00",fontSize:"14px",alignItems:"start"}}
         name="simple-controlled"
@@ -294,7 +294,7 @@ useEffect(()=>{
 </div>
 <p className='text-xs text-gray-600 text-center line-through decoration-gray-600  '>{item.price}</p>
 </div>
-:<p className='text-lg text-center text-indigo-800 font-bold  '>{item.price}</p>}
+:<p className='text-lg text-start text-indigo-800 font-bold  '>{item.price}</p>}
                    </div>
               </div>
               

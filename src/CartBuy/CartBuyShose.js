@@ -34,6 +34,7 @@ import FormLabel from '@mui/joy/FormLabel';
 import { Textarea } from '@mui/joy';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import "../pages/pages.css";
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
   return (
@@ -75,7 +76,7 @@ export default function CartBuyShose() {
   const boxcommentref=useRef();
   const buttoncommentref=useRef();
   const boxnotcomments=useRef();
-  const displycomments=useRef();
+  const displycomments11=useRef();
   const [opendialog, setOpendialog] = React.useState(false);
   const handleClickOpendialog = () => {
     setOpendialog(true);
@@ -124,7 +125,7 @@ return(persianNumber);
   }
   const displycomment=()=>{
     boxcommentref.current.className="vis";
-    displycomments.current.className="hid";
+    displycomments11.current.className="hid";
   }
     const addcomments=()=>{
       if(commenuser.length===0){
@@ -132,7 +133,7 @@ return(persianNumber);
       }
       else{
   boxcommentref.current.className="boxcommentref";
-  displycomments.current.className="disply";
+  displycomments11.current.className="disply";
       }
     }  
   const isvalidate = ()=>{
@@ -432,7 +433,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
 {cartItems.map(i=>
   <div dir='rtl' class="grid grid-cols-1 gap-8 lg:grid-cols-2 w-[80%] bg-white rounded-xl mx-auto ">
     <div className='bg-white self-center items-center'>
-    <div dir="rtl" className='flex flex-row w-[90%] self-center bg-white whitespace-pre-wrap rounded-sm px-3 py-0 -mx-5 my-4 '>
+    <div dir="rtl" className='flex flex-row w-[100%] self-center bg-white whitespace-pre-wrap rounded-sm px-3 py-0 -mx-5 my-4 '>
      <LuMessagesSquare className='font-black w-9 h-9 mt-2.5 text-indigo-800   hover:text-orange-500'/> 
       <p className='text-lg font-bold text-slate-700 py-1 px-5' > نظرات کاربران
         <p  className='text-xs pt-1 text-indigo-800 hover:text-orange-500'> {i.title1} </p>
@@ -443,12 +444,13 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         <p  className='text-xs pt-1 text-slate-700'> برای ثبت نظر لازم است ابتدا وارد حساب کاربری خود شوید </p>
        </p>
     </div>
-    <div dir="rtl" className=' mx-3 flex flex-row   self-center w-[90%] px-3 my-4'>
+    <div dir="rtl" className=' mx-3 flex flex-row   self-center w-[100%] px-3 my-4'>
           <button ref={buttoncommentref} onClick={handleClickOpendialog}    className='button1' type='submit' >  <span className='formbutton'>  افزودن نظر  </span>   </button>
    <button ref={buttoncommentref} onClick={addcomments}  className='button1 mr-5' type='submit'  >  <span className='formbutton'> دیدگاه کاربران </span></button>
 </div>
 </div>
-<div className='bg-white flex flex-col justify-start md:justify-center self-start md:self-center h-[400px]'>
+<div className='bg-white flex flex-col justify-start md:justify-center self-start md:self-center h-[400px] overflow-y-scroll'>
+  
 <Box  ref={boxnotcomments} sx={{display:"none"}}> <Typography variant='h6' sx={{color:"#585858",textAlign:"center",mx:5}}> دیدگاهی برای این محصول ثبت نشده است</Typography> 
        </Box>
      <Box ref={boxcommentref} sx={{ display:"none"}}>
@@ -469,7 +471,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
      </Typography>
        )}     
    </Box>
-<Button ref={displycomments} onClick={displycomment}sx={{display:"none"}} >
+<Button ref={displycomments11} onClick={displycomment} sx={{display:"none"}} >
   <p className='text-indigo-800 text-sm'>  ادامه ی نظرات...</p></Button> 
 </div>
 </div>
@@ -478,8 +480,9 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         </Tabs>
 </div>
 <Dialog 
- sx={{width:"90vw"}}
+ sx={{display:{xs:"flex",sm:"none"},justifyContent:"center"}}
         open={opendialog}
+        fullScreen
         keepMounted
         onClose={handleClosedialog}
         aria-describedby="alert-dialog-slide-description"
@@ -496,6 +499,91 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         </DialogTitle>
         <DialogContent>
           <Box   sx={{width:{xs:"300px",sm:"400px",md:"500px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
+    bgcolor:'white',direction:'rtl'}}
+    >   
+    {cartItems.map(i=>
+    <Box container sx={{mx:1,py:2,display:'flex',flexDirection:"column",bgcolor:'white',direction:'rtl'}}>
+      <Typography  sx={{pl:0.6,py:0,color:"#3d3d3d",fontSize:"18px"}}>    نظر خود را با ما در میان بگذارید 
+       </Typography>
+       <Typography variant='body2' sx={{pt:0.4,color:"oklch(0.398 0.195 277.366)"}}>  {i.title1} </Typography>
+       <Box className='linetinck'></Box>
+    </Box>
+    )}
+         <form  noValidate onSubmit={handlesubmit}>
+          <Box sx={{mt:1,mx:3}}>
+              <Input
+              sx={{fontSize:"16px",
+              boxshadow:"rgba(32, 4, 142, 0.65) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(32, 4, 142, 0.65) 0px -2px 6px 0px inset"
+            }}
+            placeholder='   نام و نام خانوادگی'
+                autoComplete="email"
+                name='   نام و نام خانوادگی'
+                variant="outlined"
+                required
+                id="firstName"
+                label='   نام و نام خانوادگی'
+                autoFocus
+               className='input'
+               value={name}
+               onChange={(e)=> setName(e.target.value)}
+              />
+              <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
+                {error.name}
+              </Typography>
+            <Textarea
+            placeholder='نظر خود را وارد نمایید'
+                 variant="outlined"
+                 required
+                 defaultValue={null}
+                 value={comment}
+                 onChange={(e)=> setComment(e.target.value)}
+             rows="50" cols="30"
+             sx={{width:"100%",height:"170px",fontSize:"16px",
+             boxshadow:"rgba(32, 4, 142, 0.65) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(32, 4, 142, 0.65) 0px -2px 6px 0px inset"}}
+             ></Textarea>
+               <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
+               {error.comment} 
+             </Typography>
+             <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}> امتیاز شما</FormLabel>
+                <Rating
+        name="simple-controlled"
+        value={score}
+        sx={{fontSize:"15px"}}
+        onChange={(event, newValue) => {
+          setScore(newValue)
+          ;
+        }}
+      />
+       <Typography variant='body1' sx={{color:"#f54141",mt:1}}>
+               {error.score}
+             </Typography>
+          <div  className='w-full mx-auto flex flex-col justify-center my-2'>
+          <button    className='button1' type='submit' >  <span className='formbutton'> ثبت نظر  </span></button>
+          </div> 
+          </Box>
+        </form>
+        </Box> 
+        </DialogContent>
+      </Dialog>
+      <Dialog 
+ sx={{width:"90vw",display:{xs:"none",sm:"flex"},justifyContent:"center"}}
+        open={opendialog}
+        keepMounted
+        onClose={handleClosedialog}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle sx={{my:0, py:0 }}>
+        <div className=' flex justify-between w-full'>
+ <IconButton onClick={handleClosedialog} sx={{py:0 ,':hover':{bgcolor:"white"}}} >
+ <IoClose className="block h-6 w-6 text-black hover:text-orange-400 "  />
+ </IconButton> 
+        <NavLink to={"/"}>
+      <div className="flex justify-center mx-2">
+<img src={lego} width={80} height={30}/>
+</div></NavLink> </div>
+        </DialogTitle>
+        <DialogContent>
+          <Box   sx={{width:{sm:"400px",md:"500px"},display:"flex",justifyContent:"start",flexDirection:"column",my:2,
     bgcolor:'white',direction:'rtl'}}
     >   
     {cartItems.map(i=>

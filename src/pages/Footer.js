@@ -42,7 +42,7 @@ function Footer() {
           bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100 rounded-md h-[200px] xl:h-[250px] px-4">   
           <nav class="formbutton2 flex flex-col mt-4 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
             <NavLink to={"/allbag"} class="hover:text-[#ba4008]" > همه ی کیف ها  </NavLink>
-            <NavLink to={"/allshos"} class="hover:text-[#ba4008]" > کفش ها  </NavLink>
+            <NavLink to={"/allshose"} class="hover:text-[#ba4008]" > کفش ها  </NavLink>
             <NavLink to={"/allack"} class="hover:text-[#ba4008]" > اکسسوری  </NavLink>
             <NavLink to={"/suitcase"}class="hover:text-[#ba4008]" > چمدان و ساک </NavLink>
           </nav>
@@ -89,13 +89,14 @@ function Footer() {
 
 
     <div dir="rtl" class="flex flex-col md:hidden  justify-center items-center mx-0">
-        <div className=" h-auto flex flex-col justify-start mb-4">
+      <div className="flex flex-row justify-around">
+        <div className=" h-auto flex flex-col justify-start mb-4 mx-1">
           <p class="font-medium text-center py-1">
             NAHAL SHOPE
           </p> 
-           <div className="button2 flex flex-col justify-start items-center sm:items-start h-auto  px-0.5">
+           <div className="button3 flex flex-col justify-start items-center sm:items-start h-auto  px-0.5">
         
-          <nav class=" formbutton2 flex flex-col mt-1 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
+          <nav class=" formbutton3 flex flex-col mt-1 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
             <a class="hover:text-[#ba4008]" href> درباره ی ما </a>
             <a class="hover:text-[#ba4008]" href>   تاریخچه ی برند </a>
             <a class="hover:text-[#ba4008]" href> تماس با ما </a>
@@ -103,16 +104,17 @@ function Footer() {
           </nav>
         </div>
           </div>
-          <div className="flex flex-col  h-auto justify-start my-4">
+          <div className="flex flex-col  h-auto justify-start mb-4 mx-1">
           <p class="font-medium text-center py-1"> پرفروش ترین ها
           </p>
-          <div className="button2 flex flex-col justify-start items-center sm:items-start h-auto  px-0.5">   
-          <nav class="formbutton2 flex flex-col mt-1 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
+          <div className="button3 flex flex-col justify-start items-center sm:items-start h-auto  px-0.5">   
+          <nav class="formbutton3 flex flex-col mt-1 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
           <NavLink to={"/allbag"} class="hover:text-[#ba4008]" > همه ی کیف ها  </NavLink>
-            <NavLink to={"/allshos"} class="hover:text-[#ba4008]" > کفش ها  </NavLink>
+            <NavLink to={"/allshose"} class="hover:text-[#ba4008]" > کفش ها  </NavLink>
             <NavLink to={"/allack"} class="hover:text-[#ba4008]" > اکسسوری  </NavLink>
             <NavLink to={"/suitcase"}class="hover:text-[#ba4008]" > چمدان و ساک </NavLink>
           </nav>
+        </div>
         </div>
         </div>
         <div className="flex flex-col h-auto justify-start my-4">

@@ -117,9 +117,22 @@ currentItems &&
             before:absolute before:w-full before:h-[60px] before:bottom-[-12px] before:rounded-2xl before:bg-white
             after:absolute after:right-0 after:bottom-[48px] after:w-[55px] after:h-[55px] after:bg-transparent after:rounded-full  *
         
-           bg-cover bg-center bg-no-repeat'  style={{
+           bg-cover bg-center bg-no-repeat py-0.5 px-2'  style={{
             backgroundImage: `url(${item.img})`,
           }}>
+             {item.off !=="" ?
+             <div  className="button1 mt-5 flex flex-row  justify-center items-center h-[31px] w-[33px]"
+          style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
+        <div className='formbutton w-[33px] h-[30px]'  style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}>
+        <p className='text-xs  font-bold text-center'> off</p>
+          </div>
+        </div>
+        :
+        <div  className="button1 hidden   justify-center items-center h-[35px] w-[35px]"
+        style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
+     
+      </div>
+            }
            </div>    
            <div dir="rtl" className='relative top-[-40px] z-10 py-2 px-5 transition delay-150 duration-300 ease-in-out'>
            

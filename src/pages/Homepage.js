@@ -14,8 +14,9 @@ function Homepage() {
     <BigBanner/>
    <Banner/>
    <Shegeftangiz/>
+     
       <Stores/>
-      <FrequentlyQuestions/>
+       <FrequentlyQuestions/> 
      <Footer/>
     </>
   );

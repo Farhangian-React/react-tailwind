@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useEffect,useState } from 'react';
+import bb from '../img/charmbb.jpg';
 export default function BigBanner() {
   const [photo,setPhoto]=useState(1);
   const [type,setType]=useState(1);
@@ -37,8 +38,8 @@ export default function BigBanner() {
         
   return (
     <>
-  <div className= 'flex flex-col  justify-center    bg-cover bg-center bg-no-repeat h-[30vh] md:h-[50vh] lg:h-screen mt-2'  style={{
-                   backgroundImage: `url("https://cdn.pixabay.com/photo/2016/08/05/09/31/banner-1571858_1280.jpg")`,
+  <div className= 'flex flex-col  justify-center w-screen    bg-cover bg-center bg-no-repeat h-[40vh]  mt-2'  style={{
+                   backgroundImage: `url(${bb})`,
                  }} >
       
          <Box 

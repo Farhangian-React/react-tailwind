@@ -90,6 +90,8 @@ color: aqua;
     padding: 25px;
    margin: 5px;
    border-radius:10px ;
+ 
+
   }
   .boxx
     {
@@ -184,6 +186,45 @@ color: aqua;
       }
       
       .button2:active .formbutton {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+      }
+   
+      .button3 {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color:linear-gradient(to  right, oklch(0.954 0.038 75.164), oklch(0.93 0.034 272.788),oklch(0.954 0.038 75.164));
+        --button_outline_color:oklch(0.257 0.09 281.288);
+        font-size:20px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+       
+      }
+      .formbutton3 {
+        display: flex;
+        box-sizing:border-box;
+        border: 2px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 1em 1em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+      font-size: medium;
+       
+      }
+      
+      .button3:hover .formbutton {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+      }
+      
+      .button3:active .formbutton {
         /* Push the button downwards when pressed */
         transform: translateY(0);
       }
