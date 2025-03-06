@@ -110,7 +110,7 @@ export default function FrequentlyQuestions() {
 </div> 
         <div className='boxx flex flex-col  justify-center  absolute w-full  mx-auto  z-1  '>
             <div className=' bordershadow flex flex-col justify-center items-center mx-auto my-5 w-[250px] '  >
-  <p className='text-[20px] text-center text-[#371303] px-5 pb-1 font-bold  '> سوالات پر تکرار</p>
+  <p className='text-lg text-center text-[#371303] px-5 pb-1 font-bold  '> سوالات پر تکرار</p>
       </div>
         </div>
         </div>

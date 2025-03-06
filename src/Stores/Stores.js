@@ -17,7 +17,7 @@ export const Stores = () => {
   bg-white '
 >
  <div className='bordershadow flex flex-col justify-center items-center mx-auto my-10 '  >
-  <p className='text-[20px] text-center text-[#371303] px-5 pb-1 font-bold  '>آدرس شعب کیف و کفش نهال  </p>
+  <p className='text-lg text-center text-[#371303] px-5 pb-1 font-bold  '>آدرس شعب کیف و کفش نهال  </p>
 </div>
 
  </div>

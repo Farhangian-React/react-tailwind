@@ -131,11 +131,11 @@ dir='ltr'
         sx={{ml:2}}
       >
         <NavLink to={"/allshose"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>همه ی کفش ها</MenuItem></NavLink>
-        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>کالج</MenuItem></NavLink>
-        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>صندل</MenuItem></NavLink>
-        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>مجلسی</MenuItem></NavLink>
-        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}> بوت</MenuItem></NavLink>
-        <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>اسپورت</MenuItem></NavLink>
+        <NavLink to={"/kalezhsh"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>کالج</MenuItem></NavLink>
+        <NavLink to={"/sandalsh"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>صندل</MenuItem></NavLink>
+        <NavLink to={"/majlesish"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>مجلسی</MenuItem></NavLink>
+        <NavLink to={"/botsh"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}> بوت</MenuItem></NavLink>
+        <NavLink to={"/sportsh"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose1}>اسپورت</MenuItem></NavLink>
       </Menu>
       
       <Button
@@ -164,11 +164,11 @@ dir='ltr'
         sx={{ml:2}}
       >
        <NavLink to={"/allbag"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>همه ی کیف ها</MenuItem></NavLink>
-       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کیف دستی</MenuItem></NavLink>
-       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کیف دوشی</MenuItem></NavLink>
-       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کوله پشتی</MenuItem></NavLink>
-       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}> کیف پول</MenuItem></NavLink>
-       <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>اسپورت</MenuItem></NavLink>
+       <NavLink to={"/dastib "}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کیف دستی</MenuItem></NavLink>
+       <NavLink to={"/doshib "}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کیف دوشی</MenuItem></NavLink>
+       <NavLink to={"/kolehb "}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>کوله پشتی</MenuItem></NavLink>
+       <NavLink to={"/polb"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}> کیف پول</MenuItem></NavLink>
+       <NavLink to={"/sportb "}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose2}>اسپورت</MenuItem></NavLink>
       </Menu>
       
       <Button
@@ -198,8 +198,8 @@ dir='ltr'
         sx={{ml:2}}
       >
          <NavLink to={"/allack"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>همه ی اکسسوری ها</MenuItem></NavLink>
-         <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>عینک</MenuItem></NavLink>
-         <NavLink><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>عطر و ادکلن</MenuItem></NavLink>
+         <NavLink to={"/glassa"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>عینک</MenuItem></NavLink>
+         <NavLink to={"/atra"}><MenuItem dir='rtl' sx={{width:"310px"}} onClick={handleClose3}>عطر و ادکلن</MenuItem></NavLink>
        
       </Menu>
 </div>

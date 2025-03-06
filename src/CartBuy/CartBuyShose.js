@@ -330,14 +330,14 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
          </div>
          { i.off !== "" ?
          <div className='flex flex-col justify-start'>
-          <div dir="ltr" className='flex flex-row justify-end  mx-2' >
+          <div dir="ltr" className=' flex flex-row justify-end ' >
          <div className='flex justify-center items-center rounded-full  h-[20px] w-[120px] mb-2'  > 
          <p className='text-md text-gray-800 text-center  line-through decoration-2 decoration-orange-500'>{i.price} </p></div>
            <div  className='h-[20px] w-[40px] mb-2 flex  justify-center -mt-3'>
           <button    className='button1' type='submit' >  <span className='formbutton'>   {convertToPersian(i.off)}%  </span>   </button>
           </div>
           </div>
-            <p className='text-2xl text-indigo-800 mt-1 text-right font-bold'   >
+            <p className='text-2xl text-indigo-800 mt-3 text-right font-bold'   >
             {addCommas(convertToPersian((convertToEnglish(i.pricenum)-(convertToEnglish(i.pricenum)*i.off / 100))+''))} تومان 
            </p>
            </div>

@@ -24,13 +24,13 @@ function Banner() {
     
     <div className="flex flex-col mb-10 md:my-12">
      <div className='bordershadow flex flex-col justify-center items-center mx-auto my-5 '  >
-  <p className='text-[20px] text-center text-[#371303] px-5 pb-3 font-bold  '> محصولات فروشگاه نهال</p>
+  <p className='text-lg text-center text-[#371303] px-5 pb-3 font-bold  '> محصولات فروشگاه نهال</p>
       </div>
       <div  data-aos="fade-right" dir="rtl" className=" grid grid-cols-4 md:hidden gap-8  mx-auto my-10 
       bg-white ">
       
         <NavLink to={"/allbag"}  > 
-         <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
+         <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[105px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
           <img width={80} height={80} src={bag} alt="" className="hover:scale-110 hover:opacity-55" 
@@ -41,7 +41,7 @@ function Banner() {
 
       
         <NavLink to={"/suitcase"}  > 
-         <div data-aos="zoom-out-right" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
+         <div data-aos="zoom-out-right" className="   flex flex-col justify-center items-center h-[105px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
           <img width={80} height={80} src={ch} alt="" className="hover:scale-110 hover:opacity-55" 
@@ -51,7 +51,7 @@ function Banner() {
        </NavLink> 
       
         <NavLink to={"/allshose"}  >
-          <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
+          <div data-aos="flip-left" className="   flex flex-col justify-center items-center h-[105px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
           <img width={80} height={80} src={shose} alt="" className="hover:scale-110 hover:opacity-55" 
@@ -61,7 +61,7 @@ function Banner() {
         </NavLink>
        
        <NavLink to={"/allack"}  > 
-       <div data-aos="zoom-out-right" className="   flex flex-col justify-center items-center h-[130px] mb-5" >       
+       <div data-aos="zoom-out-right" className="   flex flex-col justify-center items-center h-[105px] mb-5" >       
          <div  className=" flex flex-row  justify-center items-center h-full bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
           <img width={80} height={80} src={ai} alt="" className="hover:scale-110 hover:opacity-55" 

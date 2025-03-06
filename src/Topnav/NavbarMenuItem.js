@@ -134,7 +134,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/dastib"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -145,7 +145,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/doshib"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -156,7 +156,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/kolehb"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -167,7 +167,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/polb"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -178,7 +178,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/sportb"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -241,7 +241,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/kalezhsh"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -252,7 +252,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/sandalsh"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -263,7 +263,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/botsh"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -274,7 +274,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/majlesish"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -285,7 +285,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/sportsh"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"
@@ -350,7 +350,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-          <NavLink to={"/about"}  >
+          <NavLink to={"/glassa"}  >
         <MenuItem className="flex items-center pb-2 rounded-lg">
             <Typography
               variant="h6"
@@ -361,7 +361,7 @@ function NavbarMenuItem() {
             </Typography>
         </MenuItem>
       </NavLink>
-      <NavLink href="#" >
+      <NavLink to={"/atra"} >
         <MenuItem className="flex items-center py-2 rounded-lg">
             <Typography
               variant="h6"

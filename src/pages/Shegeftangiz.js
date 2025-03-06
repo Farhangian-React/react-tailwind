@@ -68,7 +68,7 @@ function Shegeftangiz() {
 </div> 
         <div className='boxx flex flex-col  justify-center  absolute w-full  mx-auto  z-1  '>
         <div  className='bordershadow flex flex-col justify-center items-center mx-auto my-5   '>
-<p className='text-[20px] text-center text-[#371303] px-5 pb-1 font-bold  '>   پیشنهاد شگفت انگیز</p></div>
+<p className='text-lg text-center text-[#371303] px-5 pb-1 font-bold  '>   پیشنهاد شگفت انگیز</p></div>
 <div dir="rtl" class=" flex flex-row justify-center rounded-md shadow-xs  w-1/2 md:w-3/4 items-center self-center mt-8 mx-auto ">
 <button onClick={handelclick1} type="button" class="ease-out duration-300 transition-all text-white hover:bg-orange-500
    bg-indigo-800 hover:text-black hover:translate-y-2

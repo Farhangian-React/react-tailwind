@@ -12,6 +12,7 @@ import { NavLink } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
+import FiltetSuitCase from "./FiltetSuitCase";
 function Tems({ currentItems,load }) {
   const [cartItems,setCartItems]=useContext(CartContext);
   const[datacomment,setDatacomment]=useState([]);
@@ -85,8 +86,10 @@ return(persianNumber);
      }
  return (
   <>
-<div className='flex flex-col justify-center w-[95%] mx-auto bg-slate-50 mt-5'>
-   
+<div dir="rtl" className='flex flex-row justify-center w-[99%] mx-auto bg-white mt-5 '>
+<div className='bg-white flex self-center lg:self-start h-screen w-[90%] lg:w-[35%] static lg:sticky top-[80px]'
+>
+<FiltetSuitCase/></div> 
 <div dir="rtl" class="flex justify-center flex-wrap ">
 {
   load ? 
@@ -99,7 +102,7 @@ return(persianNumber);
 :
 currentItems && 
   currentItems.map((item) => (
-    <NavLink to={"/buy"}> 
+    <NavLink to={"/cartbuysuitcase"}> 
     
      <div
     onClick={()=>{
