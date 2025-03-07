@@ -11,7 +11,7 @@ import Rating from '@mui/material/Rating';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import "../Bag/Bag.css";
-
+import FilterA from './FilterA';
 function Tems({ currentItems,load }) {
   const [cartItems,setCartItems]=useContext(CartContext);
   const[datacomment,setDatacomment]=useState([]);
@@ -85,8 +85,13 @@ return(persianNumber);
      }
  return (
   <>
-<div className='flex flex-col justify-center w-[95%] mx-auto bg-white mt-5'>
-   
+<div dir="rtl" className='flex flex-col justify-start self-start items-start lg:flex lg:flex-row lg:justify-center w-[99%] mx-auto bg-white mt-5 '>
+<div className='bg-white hidden lg:flex self-center items-start lg:self-start h-screen w-[95%] lg:w-[35%] static lg:sticky lg:top-[80px]'
+>
+<FilterA/></div> 
+<div className='bg-white flex lg:hidden  w-[95%] mb-8'
+>
+<FilterA/></div>   
 <div dir="rtl" class="flex justify-center flex-wrap ">
 {
   load ? 

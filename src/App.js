@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./Home";
 import NoPage from "./pages/nopage";
 import Stores from "./Stores/Stores";
 import {CartProvider} from './Shared/Cart-Context';

@@ -1,20 +1,14 @@
 import React, {useContext,useState} from 'react';
 import {CardData} from '../../Shared/Cart-Context';
 import {CardDataShow} from '../../Shared/Cart-Context';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { IoMdAdd } from "react-icons/io";
-import { IoMdArrowDropdown } from "react-icons/io";
 import AccordionSummary from '@mui/material/AccordionSummary';
 import { FaFilter } from "react-icons/fa6";
-import IconButton from '@mui/material/IconButton';
-import { Grid } from '@mui/material';
- 
 export default  function FilterSh(){
   
   const [data,setData]=useContext(CardData);
@@ -61,9 +55,10 @@ export default  function FilterSh(){
 return (
   <>
     <div className='w-[350px] hidden lg:flex flex-col justify-start '>
-    <div dir="rtl" className='flex justify-start rounded-sm mt-3 mr-1 h-[50px]    bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100'>
+    <div dir="rtl" className='flex justify-between rounded-sm mt-3 mr-1 h-[50px]    bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100'>
 <p className='px-2 pt-2 text-xl text-right text-indigo-900 font-black'>  نوع نمایش 
 </p>
+<FaFilter className='w-6 h-6 text-indigo-900 mt-3 m-2'/>
 </div>
 <Accordion
       expanded={index === 0}
@@ -127,15 +122,16 @@ return (
 </div>
 
 <div className='w-[98%] self-center flex flex-col justify-start lg:hidden'>
-<div dir="rtl" className='flex justify-start rounded-sm mt-3 mr-1 h-[50px]    bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100'>
+<div dir="rtl" className='flex justify-between rounded-sm mt-3 mr-1 h-[50px]    bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100'>
 <p className='px-2 pt-2 text-xl text-right text-indigo-900 font-black'>  نوع نمایش 
 </p>
+<FaFilter className='w-6 h-6 text-indigo-900 mt-3 m-2'/>
 </div>
       
 <Accordion
-      expanded={index === 0}
+      expanded={index1 === 0}
       onChange={(event, expanded) => {
-        setIndex(expanded ? 0 : null);
+        setIndex1(expanded ? 0 : null);
       }}
       sx={{borderBottom:'1px solid black',mr:1}}
     >
@@ -151,9 +147,9 @@ return (
       </AccordionDetails>
     </Accordion>
     <Accordion
-      expanded={index === 1}
+      expanded={index1 === 1}
       onChange={(event, expanded) => {
-        setIndex(expanded ? 1 : null);
+        setIndex1(expanded ? 1 : null);
       }}
       sx={{borderBottom:'1px solid black',mr:1}}
     >
@@ -173,9 +169,9 @@ return (
       </AccordionDetails>
     </Accordion>
     <Accordion
-      expanded={index === 2}
+      expanded={index1 === 2}
       onChange={(event, expanded) => {
-        setIndex(expanded ? 2 : null);
+        setIndex1(expanded ? 2 : null);
       }}
       sx={{borderBottom:'1px solid black',mr:1}}
     >

@@ -20,15 +20,13 @@ export default  function KolehB() {
 <>
 <PageTitle title='محصولات / کیف / کوله پشتی' description=' کیف ها  '/>
    <TopNavbar/> 
- 
-        
    <div data-aos="flip-left" className='svg flex justify-center items-center self-center  w-screen h-[300px] mx-auto '>
-<div data-aos="zoom-out-right" className='flex flex-col w-1/5 h-1/3 bg-inherit  '> 
-<p className='text-[36px] font-bold text-white text-center  '> کوله پشتی </p>
-<p className="text-sm text-white text-center mt-2"> محصولات/ کیف / کوله پشتی </p>
-
-</div>
-</div>
+<div data-aos="zoom-out-right"  className='blurstyle rounded-2xl flex flex-col justify-end self-center  w-1/2 md:w-1/3 h-1/3 bg-inherit backdrop-blur-lg  '> 
+<p className='textblurb text-[24px] md:text-[30px] font-bold text-white text-center  '>    کوله پشتی  </p>
+<p className="textblurb text-sm text-white text-center mt-2"> محصولات / کیف / کوله پشتی</p>
+</div> 
+</div> 
+   
           <CardKolehB  itemsPerPage={6}/>
         
           <Footer/>

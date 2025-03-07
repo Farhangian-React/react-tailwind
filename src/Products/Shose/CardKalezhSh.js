@@ -86,11 +86,13 @@ return(persianNumber);
      }
  return (
   <>
-<div dir="rtl" className='flex flex-row justify-center w-[99%] mx-auto bg-white mt-5 '>
-<div className='bg-white flex self-center lg:self-start h-screen w-[90%] lg:w-[35%] static lg:sticky top-[80px]'
+<div dir="rtl" className='flex flex-col justify-start self-start items-start lg:flex lg:flex-row lg:justify-center w-[99%] mx-auto bg-white mt-5 '>
+<div className='bg-white hidden lg:flex self-center items-start lg:self-start h-screen w-[95%] lg:w-[35%] static lg:sticky lg:top-[80px]'
 >
-<FilterSh/></div>
-   
+<FilterSh/></div> 
+<div className='bg-white flex lg:hidden  w-[95%] mb-8'
+>
+<FilterSh/></div>   
 <div dir="rtl" class="flex justify-center flex-wrap ">
 {
   load ? 
