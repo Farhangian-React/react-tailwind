@@ -136,7 +136,7 @@ return (
       sx={{mr:1}}
     > 
         <AccordionSummary className=' bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100' 
-         sx={{fontSize:'28px',fontWeight:500,direction:'rtl',color:"#312e81"}} 
+         sx={{fontSize:'20px',fontWeight:500,direction:'rtl',color:"#312e81"}} 
          expandIcon={<FaFilter className='w-6 h-6 text-indigo-900 mt-3 m-2'/>}>
 
   نوع نمایش 
