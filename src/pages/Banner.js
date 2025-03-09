@@ -8,23 +8,24 @@ import bag from "../img/images.jpg";
 import shose from "../img/shose.jpg";
 import ch from "../img/cham1.jpg";
 import ai from "../img/atr.webp";
- let i=0;
+
 function Banner() {
  const typeref=useRef();
+  let i=0;
  const text="AGYJKJKDSHFLISDHGLISGHDDLIDSGHLIDSLIGBSGFUOSGFJZHCKUSTGFBZIL";
-
+  const paragraph=typeref;
  const typeEffect=()=>{
   if(i<text.length){
     typeref.current +=text[i];
     i++;
   
   }
-  return typeref;
+
  }
 
  useEffect(() => {
 typeEffect();
-console.log(typeref);
+console.log(paragraph);
 })
   useEffect(() => {
     AOS.init({

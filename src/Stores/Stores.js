@@ -12,7 +12,7 @@ export const Stores = () => {
  <>
     <PageTitle title=' فروشگاه های نهال شاپ '   description=' نهال شاپ '/>
 
- <div className='flex flex-col justify-center self-center w-full bg-slate-50 my-20 h-1/3'>
+ <div className='flex flex-col justify-center self-center w-screen bg-slate-50 my-20 h-1/3'>
  <div dir="rtl" className='flex flex-row justify-between mx-auto mt-1 w-full py-3
   bg-white '
 >
@@ -22,7 +22,7 @@ export const Stores = () => {
 
  </div>
 
-<div className='flex flex-col lg:hidden justify-center  bg-white my-1 mx-1 px-0 py-1 rounded-sm ' >
+<div className='flex flex-col lg:hidden justify-center w-full  bg-white my-1 mx-1 px-0 py-1 rounded-sm ' >
 
 
 <Selector/>

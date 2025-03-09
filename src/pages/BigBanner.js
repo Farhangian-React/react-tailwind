@@ -44,7 +44,7 @@ export default function BigBanner() {
       switch(type){
         case 1: return " لذت یک خرید خوب و راحت ";
         case 2: return "به روزترین و جدیدترین مدل ها";
-        case 3: return "   بیشتریت تنوع در رنگ و مدل ";
+        case 3: return "   بیشترین تنوع در رنگ و مدل ";
         default: return null;
       }
     };
@@ -63,8 +63,8 @@ export default function BigBanner() {
                 }} >
 
                   </div>
-                  <div  className='svg flex justify-center items-center self-center  w-screen h-[300px] md:h-[300px] mx-auto md:hidden' >
-                  <div data-aos="zoom-out-right"  className='blurstyle rounded-2xl flex flex-col justify-end self-center w-full h-1/3   '> 
+                  <div  className='svg flex justify-center items-center self-center  w-screen h-[300px] md:h-[240px] mx-auto md:hidden' >
+                  <div data-aos="zoom-out-right"  className='blurstyle rounded-2xl flex flex-col justify-center self-center w-full h-1/3   '> 
 <p className='textblurb text-[22px]  font-bold text-white text-center  '> {returnType()} </p>
 </div> 
                

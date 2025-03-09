@@ -66,15 +66,13 @@ setDatamapshow([t]);
   };
   return (
     <>
-    <div className='flex flex-col justify-start w-full  bg-white my-2 py-1 mx-0 md:mx-2 px-0 md:px-2 h-[300px]
-    '
-    >
-  <div dir="rtl" className='flex flex-row justify-center rounded-xl  bg-white border-2 border-gray-200
-   py-0 md:py-2 px-0 sm:px-3 md:px-5 mx-0 md:mx-1 '
+    <div className='flex flex-col justify-center w-full bg-white my-2 py-1 mx-0 md:mx-2 px-0 md:px-2 h-[300px]'>
+  <div dir="rtl" className='  bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100 flex flex-row justify-center rounded-xl  border-2 border-gray-200
+   py-0 md:py-2 px-3 sm:px-3 md:px-5 mx-0 md:mx-1 '
   >
-    <div className='flex flex-col justify-start py-2 border-l-2 border-gray-200'>
+    <div className='flex flex-col justify-start py-2 px-3 '>
       <p className='text-xs text-black mx-1 md:mx-8 '> انتخاب استان</p>
-    <FormControl   dir='rtl' variant="standard" sx={{ my:1,mx:{xs:1,md:5},width:{xs:"auto",md:"200px"}}}>
+    <FormControl   dir='rtl' variant="standard" sx={{ my:1,mx:{xs:1,md:5},width:{xs:"130px",md:"200px"}}}>
     
         <Select
    
@@ -83,7 +81,7 @@ setDatamapshow([t]);
         value={fromostan.name}
         onChange={handleFromostan}
           label="انتخاب استان"
-          className='selectclass'
+          className='selectclass  w-[130px] md:w-[200px]'
         > 
          {dataselactor.map((country, key) => (
           <MenuItem  value={country.name} key={key} sx={{direction:"rtl"}}>  {country.name}</MenuItem>
@@ -91,15 +89,15 @@ setDatamapshow([t]);
         </Select>
       </FormControl>
       </div>
-      <div className='flex flex-col justify-start py-2'>
+      <div className='flex flex-col justify-start py-2 px-3'>
       <p className='text-xs text-black mx-1 md:mx-8 '> انتخاب شهر</p>
-      <FormControl variant='standard' sx={{my:1,mx:{xs:1,md:5},width:{xs:"auto",md:"200px"} }}>
+      <FormControl variant='standard' sx={{my:1,mx:{xs:1,md:5},width:{xs:"130px",md:"200px"} }}>
        
         <Select
           value={fromCities.city}
           onChange={handleFromcities}
          label="انتخاب شهر"
-      className='selectclass'
+      className='selectclass w-[130px] md:w-[200px]'
         >
             {fromCities.map((city, key) => (
           <MenuItem key={key}  value={city.city} sx={{direction:"rtl"}}>  {city.city}</MenuItem>
