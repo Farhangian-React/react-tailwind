@@ -1,8 +1,6 @@
 import React, {useContext,useState} from 'react';
 import {CardData} from '../../Shared/Cart-Context';
 import {CardDataShow} from '../../Shared/Cart-Context';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
@@ -20,6 +18,7 @@ export default  function FilterA(){
 
   const [index, setIndex] = React.useState(0);
   const [index1, setIndex1] = React.useState(null);
+  const [index0, setIndex0] = React.useState(null);
   
   
   const convertToEnglish=(str)=> {
@@ -126,12 +125,20 @@ return (
 
 
 <div className='w-[98%] self-center flex flex-col justify-start lg:hidden'>
-<div dir="rtl" className='flex justify-between rounded-sm mt-3 mr-1 h-[50px] bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100'>
-<p className='px-2 pt-2 text-xl text-right text-indigo-900 font-black'>  نوع نمایش 
-</p>
-<FaFilter className='w-6 h-6 text-indigo-900 mt-3 m-2'/>
-</div>
+<Accordion
+      expanded={index0 === 0}
+      onChange={(event, expanded) => {
+        setIndex0(expanded ? 0 : null);
+      }}
+      sx={{mr:1}}
+    > 
+        <AccordionSummary className=' bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100' 
+         sx={{fontSize:'28px',fontWeight:500,direction:'rtl',color:"#312e81"}} 
+         expandIcon={<FaFilter className='w-6 h-6 text-indigo-900 mt-3 m-2'/>}>
 
+  نوع نمایش 
+
+</AccordionSummary>
       
 <Accordion
       expanded={index1 === 0}
@@ -192,7 +199,7 @@ return (
 </FormGroup>
       </AccordionDetails>
     </Accordion>
-
+</Accordion>
    
 </div>
 </>
