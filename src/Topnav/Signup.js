@@ -101,7 +101,7 @@ fetch("https://servers-nahall.onrender.com/nahallusers",{
     <>
 
 <Dialog
-sx={{display:{xs:"flex",sm:"none"},justifyContent:"center"}}
+sx={{display:{xs:"flex",sm:"none"},justifyContent:"center",height:"95vh"}}
         fullScreen
         open={opendialog}
         keepMounted

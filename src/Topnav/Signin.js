@@ -104,7 +104,7 @@ navigate("/")
 
 
 <Dialog
-sx={{display:{xs:"flex",sm:"none"},justifyContent:"center"}}
+sx={{display:{xs:"flex",sm:"none"},justifyContent:"center",height:"95vh"}}
         open={opendialog}
         keepMounted
         fullScreen

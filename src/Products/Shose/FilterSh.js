@@ -15,6 +15,18 @@ export default  function FilterSh(){
   const [datashow,setDatashow]=useContext(CardDataShow);
   const [checked1, setChecked1] = useState(false); 
   const [checked2, setChecked2] = useState(false); 
+  const [checked3, setChecked3] = useState(false); 
+  const [checked4, setChecked4] = useState(false); 
+  const [checked5, setChecked5] = useState(false);
+  const [checkedC1, setCheckedC1] = useState(false);
+  const [checkedC2, setCheckedC2] = useState(false);
+  const [checkedC3, setCheckedC3] = useState(false);
+  const [checkedC4, setCheckedC4] = useState(false);
+  const [checkedC5, setCheckedC5] = useState(false);
+  const [checkedC6, setCheckedC6] = useState(false);
+  const [checkedC7, setCheckedC7] = useState(false);
+  const [checkedC8, setCheckedC8] = useState(false);
+  const [checkedC9, setCheckedC9] = useState(false);
 
   const [index, setIndex] = React.useState(0);
   const [index1, setIndex1] = React.useState(null);
@@ -51,6 +63,101 @@ export default  function FilterSh(){
       convertToEnglish(a.pricenum) - convertToEnglish(b.pricenum)
     )]);
     }
+const findnew=(e)=>{
+  setChecked3(e.target.checked);
+  setChecked3(!checked3);
+  setDatashow([...data.filter(i=>i.label === e.target.value )]);
+  setDatashow([...data.filter(i=>i.level === "3" ),...data.filter(i=>i.level === e.target.value )]);
+}
+const findbestseller=(e)=>{
+  setChecked4(e.target.checked);
+  setChecked4(!checked4);
+  setDatashow([...data.filter(i=>i.bestseller === e.target.value )]);
+  setDatashow([...data.filter(i=>i.bestseller === "3" ),...data.filter(i=>i.bestseller === e.target.value )]);
+  if( checked4 )  {
+    setDatashow([...data]);
+  }
+}
+const findoff=(e)=>{
+  setChecked5(e.target.checked);
+  setChecked5(!checked5);
+  setDatashow([...data.filter(i=>i.off !== "" )]);
+  if( checked5 )  {
+    setDatashow([...data]);
+  }
+}
+const handleChangeC1=(e)=>{
+  setCheckedC1(e.target.checked); 
+       setCheckedC1(!checkedC1);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+   
+    
+}
+const handleChangeC2=(e)=>{
+  setCheckedC2(e.target.checked); 
+       setCheckedC2(!checkedC2);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+       console.log(datashow);
+      
+    
+    
+}
+const handleChangeC3=(e)=>{
+  setCheckedC3(e.target.checked); 
+       setCheckedC3(!checkedC3);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+      
+
+    
+}
+const handleChangeC4=(e)=>{
+  setCheckedC4(e.target.checked); 
+       setCheckedC4(!checkedC4);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+      
+   
+    
+}
+const handleChangeC5=(e)=>{
+  setCheckedC5(e.target.checked); 
+       setCheckedC5(!checkedC5);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+      
+     
+    
+}
+const handleChangeC6=(e)=>{
+  setCheckedC6(e.target.checked); 
+       setCheckedC6(!checkedC6);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+      
+   
+    
+}
+const handleChangeC7=(e)=>{
+  setCheckedC7(e.target.checked); 
+       setCheckedC7(!checkedC7);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+      
+   
+    
+}
+const handleChangeC8=(e)=>{
+  setCheckedC8(e.target.checked); 
+       setCheckedC8(!checkedC8);
+      setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+      
+      
+    
+}
+const handleChangeC9=(e)=>{
+  setCheckedC9(e.target.checked); 
+       setCheckedC9(!checkedC9);
+       setDatashow([...data.filter(i=>i.color.find(j=>j.c === e.target.value))]);
+      
+     
+    
+}
 
 return (
   <>
@@ -72,9 +179,9 @@ return (
       <FormGroup>
 <FormControlLabel control={<Checkbox checked={checked1} value={"گرانترین  "}  onChange={sortArrayMaxtoMin} />} label="گرانترین  " />
 <FormControlLabel  control={<Checkbox checked={checked2} value={" ارزانترین"}  onChange={sortArrayMintoMax} />} label=" ارزانترین"/>
-<FormControlLabel control={<Checkbox checked={checked1} value={"جدیدترین "}  onChange={sortArrayMaxtoMin} />} label=" جدیدترین " />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"پرفروش ترین  "}  onChange={sortArrayMintoMax} />} label="   پرفروش ترین" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"تخفیف دار   "}  onChange={sortArrayMintoMax} />} label="   تخفیف دار" />
+<FormControlLabel control={<Checkbox checked={checked3} value={"جدیدترین "}  onChange={findnew} />} label=" جدیدترین " />
+<FormControlLabel  control={<Checkbox checked={checked4} value={"پرفروش ترین  "}  onChange={findbestseller} />} label="   پرفروش ترین" />
+<FormControlLabel  control={<Checkbox checked={checked5} value={"تخفیف دار   "}  onChange={findoff} />} label="   تخفیف دار" />
 </FormGroup>
       </AccordionDetails>
     </Accordion>
@@ -88,15 +195,15 @@ return (
       <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<IoMdAdd sx={{fontSize:'16px',pl:1.5}} />}>رنگ  </AccordionSummary>
       <AccordionDetails >
       <FormGroup>
-<FormControlLabel control={<Checkbox checked={checked1} value={"طلایی"}  onChange={sortArrayMaxtoMin} />} label="قهوه ای" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"آبی پاستیلی"}  onChange={sortArrayMintoMax} />} label="آبی تیره"/>
-<FormControlLabel control={<Checkbox checked={checked1} value={"مشکی"}  onChange={sortArrayMaxtoMin} />} label="مشکی" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"صورتی"}  onChange={sortArrayMintoMax} />} label="طوسی" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"آبی"}  onChange={sortArrayMintoMax} />} label="آبی" />
-<FormControlLabel control={<Checkbox checked={checked1} value={"فیروزه ای"}  onChange={sortArrayMaxtoMin} />} label=" سفید" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"آبی روشن"}  onChange={sortArrayMintoMax} />} label=" صورتی" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"شیری"}  onChange={sortArrayMintoMax} />} label="شیری" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"کرم"}  onChange={sortArrayMintoMax} />} label="کرم" />
+<FormControlLabel control={<Checkbox checked={checkedC1} value={"قهوه ای"}  onChange={handleChangeC1} />} label="قهوه ای" />
+<FormControlLabel  control={<Checkbox checked={checkedC2} value={"آبی تیره"}  onChange={handleChangeC2} />} label="آبی تیره"/>
+<FormControlLabel control={<Checkbox checked={checkedC3} value={"مشکی"}  onChange={handleChangeC3} />} label="مشکی" />
+<FormControlLabel  control={<Checkbox checked={checkedC4} value={"طوسی"}  onChange={handleChangeC4} />} label="طوسی" />
+<FormControlLabel  control={<Checkbox checked={checkedC5} value={"آبی"}  onChange={handleChangeC5} />} label="آبی" />
+<FormControlLabel control={<Checkbox checked={checkedC6} value={"سفید"}  onChange={handleChangeC6} />} label=" سفید" />
+<FormControlLabel  control={<Checkbox checked={checkedC7} value={"صورتی"}  onChange={handleChangeC7} />} label=" صورتی" />
+<FormControlLabel  control={<Checkbox checked={checkedC8} value={"شیری"}  onChange={handleChangeC8} />} label="شیری" />
+<FormControlLabel  control={<Checkbox checked={checkedC9} value={"کرم"}  onChange={handleChangeC9} />} label="کرم" />
 </FormGroup>
       </AccordionDetails>
     </Accordion>
@@ -165,15 +272,15 @@ return (
       <AccordionSummary  sx={{fontSize:'16px',direction:'rtl'}}  expandIcon={<IoMdAdd sx={{fontSize:'16px',pl:1.5}} />}>رنگ  </AccordionSummary>
       <AccordionDetails >
       <FormGroup>
-<FormControlLabel control={<Checkbox checked={checked1} value={"طلایی"}  onChange={sortArrayMaxtoMin} />} label="قهوه ای" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"آبی پاستیلی"}  onChange={sortArrayMintoMax} />} label="آبی تیره"/>
-<FormControlLabel control={<Checkbox checked={checked1} value={"مشکی"}  onChange={sortArrayMaxtoMin} />} label="مشکی" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"صورتی"}  onChange={sortArrayMintoMax} />} label="طوسی" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"آبی"}  onChange={sortArrayMintoMax} />} label="آبی" />
-<FormControlLabel control={<Checkbox checked={checked1} value={"فیروزه ای"}  onChange={sortArrayMaxtoMin} />} label=" سفید" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"آبی روشن"}  onChange={sortArrayMintoMax} />} label=" صورتی" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"شیری"}  onChange={sortArrayMintoMax} />} label="شیری" />
-<FormControlLabel  control={<Checkbox checked={checked2} value={"کرم"}  onChange={sortArrayMintoMax} />} label="کرم" />
+      <FormControlLabel control={<Checkbox checked={checkedC1} value={"قهوه ای"}  onChange={handleChangeC1} />} label="قهوه ای" />
+<FormControlLabel  control={<Checkbox checked={checkedC2} value={"آبی تیره"}  onChange={handleChangeC2} />} label="آبی تیره"/>
+<FormControlLabel control={<Checkbox checked={checkedC3} value={"مشکی"}  onChange={handleChangeC3} />} label="مشکی" />
+<FormControlLabel  control={<Checkbox checked={checkedC4} value={"طوسی"}  onChange={handleChangeC4} />} label="طوسی" />
+<FormControlLabel  control={<Checkbox checked={checkedC5} value={"آبی"}  onChange={handleChangeC5} />} label="آبی" />
+<FormControlLabel control={<Checkbox checked={checkedC6} value={"سفید"}  onChange={handleChangeC6} />} label=" سفید" />
+<FormControlLabel  control={<Checkbox checked={checkedC7} value={"صورتی"}  onChange={handleChangeC7} />} label=" صورتی" />
+<FormControlLabel  control={<Checkbox checked={checkedC8} value={"شیری"}  onChange={handleChangeC8} />} label="شیری" />
+<FormControlLabel  control={<Checkbox checked={checkedC9} value={"کرم"}  onChange={handleChangeC9} />} label="کرم" />
 </FormGroup>
       </AccordionDetails>
     </Accordion>

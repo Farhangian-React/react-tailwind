@@ -480,7 +480,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
         </Tabs>
 </div>
 <Dialog 
- sx={{display:{xs:"flex",sm:"none"},justifyContent:"center"}}
+ sx={{display:{xs:"flex",sm:"none"},justifyContent:"center",height:"95vh"}}
         open={opendialog}
         fullScreen
         keepMounted
