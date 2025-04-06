@@ -104,7 +104,8 @@ navigate("/")
 
 
 <Dialog
-sx={{display:{xs:"flex",sm:"none"},justifyContent:"center",height:"95vh"}}
+className='flex sm:hidden justify-center h-[90vh]'
+
         open={opendialog}
         keepMounted
         fullScreen

@@ -6,6 +6,7 @@ export const CardDataoff=createContext();
 export const CardDatamap=createContext();
 export const CardDataShow=createContext();
 export const CardDatamapshow=createContext();
+export const MultiStep=createContext();
 
 
 
@@ -19,6 +20,7 @@ export const CartProvider=(props)=>{
     const [datamap,setDatamap]=useState([]);
     const [datamapshow,setDatamapshow]=useState([]);
     const [datashow,setDatashow]=useState([]);
+    const [currentstep,setCurrentstep]=useState(1);
 
     
     
@@ -30,7 +32,9 @@ export const CartProvider=(props)=>{
                 <CardDatamap.Provider value={[datamap,setDatamap]}> 
                 <CardDatamapshow.Provider value={[datamapshow,setDatamapshow]}>
                 <CardDataoff.Provider value={[dataoff,setDataoff]}>
+                    <MultiStep.Provider value={[currentstep,setCurrentstep]}>
                       {props.children}
+                      </MultiStep.Provider>
                       </CardDataoff.Provider> 
                       </CardDatamapshow.Provider>
                     </CardDatamap.Provider>

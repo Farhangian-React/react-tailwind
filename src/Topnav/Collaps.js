@@ -2,8 +2,6 @@ import React from 'react';
 import "react-toastify/dist/ReactToastify.css";
 import { FaAngleDown } from "react-icons/fa6";
 import {ListItem,List} from "@material-tailwind/react";
-import { RiAdminLine } from "react-icons/ri";
-import { LuShoppingCart } from "react-icons/lu";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -75,11 +73,14 @@ function Collaps() {
     </button>
 </div>
 <Drawer
+
 sx={{
 width: drawerWidth,
 flexShrink: 0,
 '& .MuiDrawer-paper': {
 width: drawerWidth,
+borderTopLeftRadius:"30px",
+borderTopLeftRadius:"30px"
 },
 }}
 variant="persistent"
@@ -87,8 +88,9 @@ anchor="right"
 open={open}
 dir='ltr'
 >
+
 <DrawerHeader >
-  <div className=' flex justify-between w-full  '>
+  <div className=' flex justify-between w-full mr-4  '>
  
 <IconButton onClick={handleDrawerClose} sx={{py:0 ,':hover':{bgcolor:"white"}}} >
 <IoClose className="block h-6 w-6 text-black hover:text-orange-500 "  />
@@ -102,7 +104,7 @@ dir='ltr'
 </div>
 </DrawerHeader>
 <Divider />
-<div className='flex flex-col justify-start mr-2'>
+<div className='flex flex-col justify-start mr-2 mt-3 '>
 
       <Button
       width="340px"
@@ -219,14 +221,14 @@ dir='ltr'
 
   </ListItemButton>
 </ListItem></NavLink>
-<NavLink to={"/feedback"}>
+<NavLink to={"/pageshegeft"}>
 <ListItem dir='rtl'  disablePadding >
   <ListItemButton sx={{fontSize:"14px",fontWeight:600,'&:hover':{bgcolor:"white",color:"#ff6633"}}}>
    محصولات شگفت انگیز
 
   </ListItemButton>
 </ListItem></NavLink>
-<NavLink>
+<NavLink to={"/contact"}>
 <ListItem dir='rtl'  disablePadding >
   <ListItemButton sx={{fontSize:"14px",fontWeight:600,'&:hover':{bgcolor:"white",color:"#ff6633"}}}>
    تماس با ما
@@ -235,22 +237,15 @@ dir='ltr'
 </ListItem></NavLink>
 
 </List>
-<div className="sticky bottom-0 w-[95%] mx-auto h-[50px]  flex justify-center items-center
+<div className="fixed bottom-[15px] w-[340px] mx-auto h-[50px]  flex justify-center items-center
  bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100 ">
 
-<NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
+
+<NavLink to={"/signup"} className={"blurstyle"} style={{display:"flex",justifyContent:"center",textAlign:"center", cursor:"pointer", alignItems:"center"}}
 >
-<LuShoppingCart className='font-black w-7 h-7  hover:text-orange-500 mx-2' />
-</NavLink>
-<NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
->
-<RiAdminLine className='font-black w-7 h-7  hover:text-orange-500 mx-2 ' />
+<p  className='textblursh text-[16px] font-bold text-black text-center  '>ورود | ثبت نام</p>
 
 </NavLink>
-
-
-
-
 </div>
 </Drawer>
 

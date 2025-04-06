@@ -1,11 +1,14 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import "react-toastify/dist/ReactToastify.css";
 import NavbarMenuItem from './NavbarMenuItem';
 import { RiAdminLine } from "react-icons/ri";
 import { LuShoppingCart } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import Collaps from './Collaps';
+import Badge from '@mui/material/Badge';
+import {CartBuyContext} from '../Shared/Cart-Context';
 function TopNavbar() {
+  const [cartItemsBuy,setCartItemsBuy]=useContext(CartBuyContext); 
  return (
   <>
   
@@ -27,25 +30,20 @@ function TopNavbar() {
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg></button>
-    </form>
-   
+    </form>   
 </div>
 <div className="flex  justify-between pr-4 py-0 h-8 ">
-
 <NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
 >
-<RiAdminLine className='font-black w-7 h-6 text-zinc-700  hover:text-orange-500 mx-2 ' />
-
+<RiAdminLine className='font-black w-7 h-6 text-zinc-700  hover:text-orange-500 mx-4 ' />
 </NavLink>
-
-
-<NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
+<Badge color='warning' badgeContent={cartItemsBuy.length} sx={{color:"white"}}>
+<NavLink to={"/endbuy"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
 >
 <LuShoppingCart className='font-black w-7 h-6 text-zinc-700 hover:text-orange-500' />
 </NavLink>
-
+  </Badge>
 </div>
-
 </nav>
    <nav dir='ltr' className='sticky top-0 hidden md:flex   z-20 mt-0 w-screen bg-white h-[70px] mx-auto   '>
    <NavbarMenuItem/>

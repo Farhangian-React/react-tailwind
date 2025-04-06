@@ -11,22 +11,20 @@ import ai from "../img/atr.webp";
 
 function Banner() {
  const typeref=useRef();
+ 
+ const text="سلام من الهام فرهنگیان مهندس فناوری اطلاعات هستم";
   let i=0;
- const text="AGYJKJKDSHFLISDHGLISGHDDLIDSGHLIDSLIGBSGFUOSGFJZHCKUSTGFBZIL";
-  const paragraph=typeref;
- const typeEffect=()=>{
+ 
+
+
+ useEffect(() => {
   if(i<text.length){
     typeref.current +=text[i];
     i++;
-  
+   
   }
+}, [typeref]);
 
- }
-
- useEffect(() => {
-typeEffect();
-console.log(paragraph);
-})
   useEffect(() => {
     AOS.init({
       disable: "phone",
@@ -42,7 +40,7 @@ console.log(paragraph);
     
     <div className="bg-white flex flex-col mb-20 md:my-12">
      <div className='bordershadow flex flex-col justify-center items-center mx-auto my-5 '  >
-  <p ref={typeref} className='text-lg text-center text-[#371303] px-5 pb-3 font-bold  '> </p>
+  <p  className='text-lg text-center text-[#371303] px-5 pb-3 font-bold  '>محصولات فروشگاه نهال </p>
       </div>
       <div  data-aos="fade-right" dir="rtl" className="w-full grid grid-cols-2 md:hidden gap-8  mx-auto my-5 
       bg-white ">

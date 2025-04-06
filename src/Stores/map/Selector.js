@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import {CardDatamapshow} from '../../Shared/Cart-Context';
 import { FaLocationDot } from "react-icons/fa6";
-import storimage from "../../img/Stores.png"
+import storimage from "../../img/Stores.png";
 import "../Stores.css";
 
 export default function Selector() {

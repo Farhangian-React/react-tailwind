@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
+import {DialogActions,DialogContentText} from '@mui/material';
 import { IoClose } from "react-icons/io5";
 import DialogTitle from '@mui/material/DialogTitle';
 import  {useContext,useState,useRef} from 'react';
@@ -34,6 +35,8 @@ import FormLabel from '@mui/joy/FormLabel';
 import { Textarea } from '@mui/joy';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Buttons from './Buttons';
+import { FaRegTrashAlt } from "react-icons/fa";
 import "../pages/pages.css";
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,7 +70,6 @@ export default function CartBuyShose() {
   const [image,setImage]=useState();
   const [index, setIndex] = React.useState(null);
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
   const [name,setName]=useState("");
   const [comment,setComment]=useState("");
   const [score,setScore]=useState("");
@@ -78,6 +80,13 @@ export default function CartBuyShose() {
   const boxnotcomments=useRef();
   const displycomments11=useRef();
   const [opendialog, setOpendialog] = React.useState(false);
+  const [opendialog1, setOpendialog1] = React.useState(false);
+  const handleClickOpendialog1 = () => {
+    setOpendialog1(true);
+  };
+  const handleClosedialog1 = () => {
+    setOpendialog1(false);
+  };
   const handleClickOpendialog = () => {
     setOpendialog(true);
   };
@@ -113,6 +122,9 @@ export default function CartBuyShose() {
 return(persianNumber);
   }
   const addCommas=(nStr)=>{
+    if(nStr.length === 6){
+      return   nStr.substring(0, 3) + "," + nStr.substring(3, 6);
+    }
     if(nStr.length === 7){
       return  nStr.substring(0,1) + "," + nStr.substring(1, 4) + "," + nStr.substring(4, 7);
     }
@@ -209,9 +221,7 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
       })}
           }
       }
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+
   const addToCart=(p)=>{ 
     setCartItems([p]);  
    if(cartItemsBuy.includes(p)){
@@ -222,8 +232,22 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
     setCartItemsBuy((currState)=>{
       return [...currState,p]});
    }
-   setOpen(true);
+   setOpendialog1(true);
     } 
+    const deletList=(e)=>{
+      setCartItemsBuy([...cartItemsBuy.filter(q=>q.id !==e.id)]);
+      setOpend(false);
+    }
+    const totalPrice=addCommas(convertToPersian(cartItemsBuy.reduce((sum,li)=>sum+Number( convertToEnglish(li.pricenum1)-(convertToEnglish(li.pricenum1)*li.off / 100)),0)+""));
+    const [opend, setOpend] = useState(false);
+    const handleClickOpend = () => {
+      setOpend(true);
+    };
+  
+    const handleClosed = () => {
+      setOpend(false);
+    };
+
   return(
     <>
      {cartItems.map(i=>
@@ -346,19 +370,19 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
           <div  className="flex w-full flex-row justify-center mt-5 ">
             <div className='flex flex-col justify-start w-full mx-3 '>
               <p className='text-sm text-gray-700 text-start font-bold py-2 '> رنگ </p>
-        <Select dir="ltr" size="sm" className='align-text-top h-full pb-6 border-2
+        <Select dir="ltr" size="sm" className='text-center align-text-top h-full pb-6 border-2
          border-indigo-800 hover:border-orange-500 rounded-lg ' >
       {i.color.map(j=>   
-        <Option>{j.c}  </Option>
+        <Option className='text-center' >{j.c}  </Option>
          )}
       </Select>
       </div>
       <div className='flex flex-col w-full h-[120px]  mx-3'>
       <p className='text-sm text-gray-700 text-start font-bold py-2'> اندازه </p>
-      <Select dir="ltr" size="sm" className='align-text-top h-full pb-6 border-2
+      <Select dir="ltr" size="sm" className='text-center align-text-top h-full pb-6 border-2
        border-indigo-800 hover:border-orange-500 rounded-lg ' >
       {i.size.map(j=> 
-        <Option>{j.z}</Option>
+        <Option className='text-center' >{j.z}</Option>
         )}
       </Select></div>
     </div>
@@ -366,6 +390,163 @@ toast.success("ثبت دیدگاه با موفقیت صورت گرفت") ;
            <div className='flex flex-row justify-start my-1 md:my-2 mx-2' >
           <button onClick={()=> addToCart(i)}  className='button1' type='submit' >  <span className='formbutton'>   افزودن به سبد خرید  </span>
           </button>
+
+
+
+
+
+
+
+     <Dialog
+sx={{justifyContent:"center",width:
+  
+  
+  
+  "98vw"}}
+        open={opendialog1}
+        keepMounted
+     
+     
+     
+        onClose={handleClosedialog1}
+        aria-describedby="alert-dialog-slide-description"
+     fullWidth
+      >
+        <DialogTitle sx={{my:0, py:0}}>
+        <div className=' flex justify-between w-full'>
+ 
+ <IconButton onClick={handleClosedialog1} sx={{py:0 ,':hover':{bgcolor:"white"}}} >
+ <IoClose className="block h-5 w-5 text-black hover:text-orange-400 "  />
+ </IconButton> 
+<div  className=' mt-5'>
+ <p className=' text-[18px] font-bold text-gray-600 text-center  '>کارت خرید</p>
+</div>
+        <NavLink to={"/"}>
+      
+      <div className="flex justify-center mx-2">
+<img src={lego} width={50} height={25}/>
+</div></NavLink>
+ </div>
+        </DialogTitle>
+      
+        <DialogContent  sx={{borderBottom: "1px solid gray", boxShadow:"0px 2px 15px #414141 inset" }} > 
+           {cartItemsBuy.map((item) => (
+        <div dir='rtl' className='hidden md:flex flex-row justify-between w-full h-1/5 my-2 p-2 border-2 border-gray-200'>
+  <div  ><img src={item.img} width={80} height={40}/></div>
+ 
+  <div className=' inline-flex justify-start self-center items-center py-1 w-[250px] '>
+    <div className='w-1/2 py-1'> <p className='text-xs text-center flex-nowrap '>{item.title1}</p></div>
+    <div  className='w-1/2 py-1'>{<Buttons t={item}  />}</div>
+  </div>
+  <div className='w-[150px]   inline-flex justify-start self-center items-center'  > 
+  <p className='text-[16px] text-gray-500  text-right font-bold'   >
+            {addCommas(convertToPersian((convertToEnglish(item.pricenum1)-(convertToEnglish(item.pricenum1)*item.off / 100))+''))} تومان 
+           </p>
+  </div>
+  <div className=' inline-flex justify-start self-center items-center' >
+<FaRegTrashAlt   onClick={handleClickOpend}  className='w-4 h-4  text-indigo-800 hover:text-orange-500'/>
+  </div>
+  <Dialog
+             
+             open={opend}
+             onClose={handleClosed}
+             aria-labelledby="alert-dialog-title"
+             aria-describedby="alert-dialog-description"
+           >
+             <DialogTitle  id="alert-dialog-title" sx={{direction:'rtl'}}>
+               {"حذف محصول"}
+             </DialogTitle>
+             <DialogContent>
+               <DialogContentText id="alert-dialog-description" sx={{color:"#585858"}}>
+               آیا از حذف این محصول از سبد خرید خود مطمین هستید؟
+               </DialogContentText>
+             </DialogContent>
+             <DialogActions sx={{mx:3}} >
+               <Button   size='small' sx={{'&:hover': {backgroundColor:'#ffebee'},p:0,border:'1px solid gray',borderRadius:'15px',backgroundColor:'white',color:'black',}} onClick={handleClosed}>لغو</Button>
+               <Button  size='small'  sx={{ '&:hover': {backgroundColor:'#f44336'},p:0,borderRadius:'15px',backgroundColor:'#d50000',color:'white'}}  onClick={()=>deletList(item)} autoFocus>
+                 تایید
+               </Button>
+             </DialogActions>
+           </Dialog>
+    </div> 
+  
+
+  
+  ))} 
+   {cartItemsBuy.map((item) => (
+        <div dir='rtl' className=' flex md:hidden flex-col justify-center w-full h-1/3 my-2 p-2 mx-0 border-2 border-gray-200'>
+  <div className='flex flex-row justify-between' >
+    <img src={item.img} width={60} height={35}/>
+ 
+  <div className=' inline-flex justify-start self-center items-center py-1 w-[280px] px-1 '>
+    <p className='text-xs text-center flex-nowrap '>{item.title1}</p>
+  
+  </div>
+  </div>
+  <div className='flex flex-row justify-between'>
+  <div  className=' py-1'>{<Buttons t={item}  />}</div>
+  <div className='  inline-flex justify-center self-center items-center'  > 
+  <p className='text-[14px] text-gray-500  text-center font-bold'   >
+            {addCommas(convertToPersian((convertToEnglish(item.pricenum1)-(convertToEnglish(item.pricenum1)*item.off / 100))+''))} تومان 
+           </p>
+  </div>
+ 
+  <div className=' inline-flex justify-start self-center items-center' >
+<FaRegTrashAlt   onClick={handleClickOpend}  className='w-4 h-4  text-indigo-800 hover:text-orange-500'/>
+  </div>
+  </div>
+  <Dialog
+             
+             open={opend}
+             onClose={handleClosed}
+             aria-labelledby="alert-dialog-title"
+             aria-describedby="alert-dialog-description"
+           >
+             <DialogTitle  id="alert-dialog-title" sx={{direction:'rtl'}}>
+               {"حذف محصول"}
+             </DialogTitle>
+             <DialogContent>
+               <DialogContentText id="alert-dialog-description" sx={{color:"#585858"}}>
+               آیا از حذف این محصول از سبد خرید خود مطمین هستید؟
+               </DialogContentText>
+             </DialogContent>
+             <DialogActions sx={{mx:3}} >
+               <Button   size='small' sx={{'&:hover': {backgroundColor:'#ffebee'},p:0,border:'1px solid gray',borderRadius:'15px',backgroundColor:'white',color:'black',}} onClick={handleClosed}>لغو</Button>
+               <Button  size='small'  sx={{ '&:hover': {backgroundColor:'#f44336'},p:0,borderRadius:'15px',backgroundColor:'#d50000',color:'white'}}  onClick={()=>deletList(item)} autoFocus>
+                 تایید
+               </Button>
+             </DialogActions>
+           </Dialog>
+    </div> 
+  
+
+  
+  ))} 
+    <div className='flex flex-row justify-between w-full md:px-6'>
+          <div className='flex flex-row justify-between'>
+            <p className='text-[14px] md:text-[16px] font-bold text-gray-600 text-center'>تومان </p>
+          <p dir='rtl' className='px-2 md:px-3 text-[14px]   md:text-[16px] font-bold text-indigo-800 text-center' >{totalPrice}
+            </p> </div>
+          <p className='text-[14px]  md:text-[16px] font-bold text-gray-600 text-center' >:جمع سبد خرید </p>
+          </div>
+        </DialogContent>
+        <DialogActions sx={{my:0, py:1}}>
+          <div className='flex flex-row justify-between px-5 w-full '>
+          <button   className='button1' type='submit' >  <span className='formbutton'>   انصراف </span>
+          </button>
+          <NavLink to={"/endbuy"}>
+            <button   className='button1' type='submit' >  <span className='formbutton'> ثبت سفارش  </span>
+          </button></NavLink>
+          </div>
+        </DialogActions>
+      </Dialog>
+
+
+
+
+
+
+
           </div> 
          <Box sx={{display:'flex',justifyContent:'center',py:4,mb:3,mx:2}}>
          <BsFillInfoCircleFill sx={{mt:0,pr:1.5,fontSize:'18px',color:'#4b4f4f'}}/>

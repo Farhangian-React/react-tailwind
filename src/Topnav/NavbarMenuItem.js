@@ -376,7 +376,7 @@ function NavbarMenuItem() {
         </MenuList>
       </Menu>
             <NavLink
-              to="/feedback"
+              to="/pageshegeft"
               style={({ isActive }) => ({
                 color: isActive ? "rgb(107, 33, 168)" : "#000",
                 textDecoration: "none",
@@ -390,7 +390,7 @@ function NavbarMenuItem() {
               </li>
             </NavLink>
             <NavLink
-              to="/portfolio"
+              to="/contact"
               style={({ isActive }) => ({
                 color: isActive ? "rgb(107, 33, 168)" : "#000",
                 textDecoration: "none",

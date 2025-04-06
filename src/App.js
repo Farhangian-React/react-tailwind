@@ -29,12 +29,20 @@ import KolehB from "./Products/Bag/KolehB" ;
 import BotSh from "./Products/Shose/BotSh";
 import AtrA from "./Products/Acksosory/AtrA";
 import GlassA from "./Products/Acksosory/GlassA";
+import EndBuy from "./CartBuy/EndBuy";
+import SendingMethod from "./pages/SendingMethod";
+import PageShegeft from "./pages/PageShegeft";
+import Contact from "./Contact"
 function App() {
   return (
     <>     <CartProvider>
              <div className="content">
             <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/pageshegeft" element={<PageShegeft />} />
+          <Route path="/sendingmethod" element={<SendingMethod />} />
+          <Route path="/endbuy" element={<EndBuy />} />
           <Route path="/buy" element={<CartBuyShose />} />
           <Route path="/cartbuysuitcase" element={<CartBuySuitCase />} />
           <Route path="/suitcase" element={<SuitCase />} />
