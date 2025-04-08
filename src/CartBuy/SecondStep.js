@@ -121,7 +121,7 @@ return(
     </div>
 
   
-<Box sx={{mx:{xs:15,lg:5},mt:5}}>
+
 <div dir="rtl" class="p-6 bg-gray-100 flex items-center justify-center">
   <div class="container max-w-screen-lg mx-auto">
     <div>
@@ -208,7 +208,7 @@ return(
     </a>
   </div>
 </div>
-     </Box>
+
   
 </>
 )
