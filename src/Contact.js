@@ -81,9 +81,9 @@ function Contact() {
      <ToastContainer />  
     </div>
 <div dir='rtl'
- className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-[100vw] h-auto flex-col lg:flex-row items-center self-center mt-10 lg:mt-0 pt-6'>
+ className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-[100vw] h-auto flex-col lg:flex-row items-center self-center lg:mt-0 pt-6 mx-auto'>
 
-<div className='w-[100vw] lg:w-[50vw] flex justify-center flex-col self-start mx-1'>
+<div className='w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto'>
     <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col md:border-b-2 border-b-gray-300'>  
 <div className='flex flex-row justify-center'
 >
