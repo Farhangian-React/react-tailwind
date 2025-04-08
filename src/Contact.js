@@ -83,9 +83,8 @@ function Contact() {
 <div dir='rtl'
  className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-[100vw] h-auto flex-col lg:flex-row items-center self-center mt-10 lg:mt-0 pt-6'>
 
-
-    <Box sx={{width:{xs:"100vw",lg:"50vw"},display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mx:2}}> 
-    <Box sx={{borderBottom:"1px solid gray",display:"flex",justifyContent:"center",alignSelf:"center",width:"95%",height:"100px",flexDirection:"column"}}>  
+<div className='w-[100vw] lg:w-[50vw] flex justify-center flex-col self-start mx-1'>
+    <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col md:border-b-2 border-b-gray-300'>  
 <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
@@ -94,8 +93,8 @@ function Contact() {
 <p className=" text-sm md:text-md lg:text-lg text-gray-700 text-center mt-2">
 جهت ارسال نظرات و پیشنهادات و انتقادات خود می توانید از طریق فرم زیر اقدام نمایید   
 </p>
-</Box> 
-<Box sx={{mx:{xs:15,lg:5},mt:5}}>
+</div> 
+
 <form  noValidate onSubmit={handlesubmit}>
 <Grid container spacing={2} sx={{mt:1}}>
           <Grid  item xs={4}   >
@@ -200,9 +199,9 @@ function Contact() {
           </Grid>
         </form>
         
-</Box>
 
-   </Box> 
+
+   </div> 
  <Box sx={{width:{xs:"100vw",lg:"50vw"},display:"flex",justifyContent:"center",flexDirection:"column-reverse",alignSelf:"start",mx:1}}> 
    <Box sx={{alignSelf:"center",
        display:"flex",
@@ -217,8 +216,8 @@ function Contact() {
      
       }}>
         </Box>
-        <Box sx={{width:{xs:"100vw",lg:"50vw"},display:"flex",justifyContent:"center",flexDirection:"column",alignSelf:"start",mx:2,mt:{xs:5,lg:0}}}> 
-   <Box sx={{borderBottom:"1px solid gray",display:"flex",justifyContent:"center",alignSelf:"start",width:"95%",height:"100px",flexDirection:"column"}}>  
+        <div  className='w-[100vw] lg:w-[50vw] flex justify-center flex-col self-start mx-1'>
+        <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col md:border-b-2 border-b-gray-300'>   
    <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
@@ -227,8 +226,8 @@ function Contact() {
 <p className=" text-sm md:text-md lg:text-lg text-gray-700 text-center mt-2">
 راه های برقراری ارتباط با شرکت سهیل
 </p>
-</Box> 
-<Box sx={{display:"flex",flexDirection:"column",justifyContent:"start",mx:5,mt:5}}>
+</div> 
+<div className='flex flex-col justify-start mx-3 mt-3'>
 <Box  sx={{display:'flex',flexDirection:"row",alignSelf:"start"}}>
      <FaLocationDot className=' text-orange-700 w-5 h-5  mt-2' /> 
       <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"16px"}}> دفتر مرکزی: تهران، سعادت آباد، میدان کتاب، بلوار کوهستان، نبش گل‌گشت، پلاک 2/1</Typography>
@@ -241,8 +240,8 @@ function Contact() {
      <LuMessagesSquare  className=' text-orange-700 w-5 h-5  mt-2'/> 
       <Typography  sx={{px:2,py:1,color:"#8a8a8a",fontSize:"16px"}}> info@sohil.com</Typography>
     </Box>
-</Box>
-   </Box>
+</div>
+   </div>
    </Box>
      </div>
     <Box sx={{width:'100%' }}>
