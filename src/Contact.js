@@ -84,7 +84,7 @@ function Contact() {
  className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-[100vw] h-auto flex-col lg:flex-row items-center self-center lg:mt-0 pt-6 mx-auto'>
 
 <div className='w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto'>
-    <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col md:border-b-2 border-b-gray-300'>  
+    <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col border-b-2 border-b-gray-300'>  
 <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
@@ -97,7 +97,7 @@ function Contact() {
 
 <form  noValidate onSubmit={handlesubmit}>
 <Grid container spacing={2} sx={{mt:1}}>
-          <Grid  item xs={4}   >
+          <Grid  item xs={12} md={6}   >
             <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}>  نام و نام خانوادگی  </FormLabel>
               <Input
             color="warning"
@@ -119,7 +119,7 @@ function Contact() {
                 {error.name}
               </Typography>
               </Grid>
-              <Grid  item xs={4}   >
+              <Grid  item xs={12} md={6}    >
             <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}> آدرس ایمیل </FormLabel>
               <Input
                 color="warning"
@@ -137,7 +137,7 @@ function Contact() {
                {error.email}
              </Typography>
              </Grid>
-             <Grid  item xs={4}   >
+             <Grid  item xs={12} md={6}    >
             <FormLabel sx={{mb:1,color:"#615d5d",fontSize:"14px"}}> شماره تماس  </FormLabel>
               <Input
                 color="warning"
@@ -217,7 +217,7 @@ function Contact() {
       }}>
         </Box>
         <div  className='w-[100vw] lg:w-[50vw] flex justify-center flex-col self-start mx-1'>
-        <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col md:border-b-2 border-b-gray-300'>   
+        <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col border-b-2 border-b-gray-300'>   
    <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
