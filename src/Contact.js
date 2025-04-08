@@ -14,7 +14,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Input from '@mui/joy/Input';
 import FormLabel from '@mui/joy/FormLabel';
-import imgg from "./img/Stores.png";
+import imgg from "./img/contact-us.png";
 function Contact() {
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
@@ -81,17 +81,17 @@ function Contact() {
      <ToastContainer />  
     </div>
 <div dir='rtl'
- className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-[100vw] h-auto flex-col lg:flex-row items-center self-center lg:mt-0 pt-6 mx-auto'>
+ className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-full h-auto flex-col lg:flex-row items-center self-center pt-6 md:mt-3 mx-auto'>
 
-<div className='w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto'>
-    <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col border-b-2 border-b-gray-300'>  
+<div className=' w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
+    <div className='flex justify-center self-center w-[300px] md:w-[450px] lg:w-[50vw] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'>  
 <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
 فرم تماس با ما
 </p></div>
 <p className=" text-sm md:text-md lg:text-lg text-gray-700 text-center mt-2">
-جهت ارسال نظرات و پیشنهادات و انتقادات خود می توانید از طریق فرم زیر اقدام نمایید   
+جهت ارسال نظرات و پیشنهادات و انتقادات    
 </p>
 </div> 
 
@@ -202,23 +202,12 @@ function Contact() {
 
 
    </div> 
- <Box sx={{width:{xs:"100vw",lg:"50vw"},display:"flex",justifyContent:"center",flexDirection:"column-reverse",alignSelf:"start",mx:1}}> 
-   <Box sx={{alignSelf:"center",
-       display:"flex",
-       borderRadius:1,
-       backgroundImage:`url(${imgg})`,
-       backgroundPosition: 'center',
-       backgroundSize:"contained",
-       backgroundRepeat: 'no-repeat',
-       width:{xs:"100vw",lg:"50vw"},
-       height:"400px",
-       mt:1,
-     
-      }}>
-        </Box>
-        <div  className='w-[100vw] lg:w-[50vw] flex justify-center flex-col self-start mx-1'>
-        <div className='flex justify-center self-center w-[92vw] h-[100px] flex-col border-b-2 border-b-gray-300'>   
-   <div className='flex flex-row justify-center'
+   <div  className='w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
+  
+       
+<div className=' w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
+    <div className='flex justify-center self-center w-[300px] md:w-[450px] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'> 
+       <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
  تماس با ما
@@ -242,7 +231,13 @@ function Contact() {
     </Box>
 </div>
    </div>
-   </Box>
+   <div
+   className=' flex flex-row justify-center self-center bg-contain bg-center 
+       bg-no-repeat  h-[400px] w-[80vw]  lg:w-[50vw] mx-auto mt-1 ' style={{
+         backgroundImage: `url(${imgg})`,
+       }}>
+        </div>
+   </div>
      </div>
     <Box sx={{width:'100%' }}>
       <Footer/>
