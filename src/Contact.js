@@ -14,7 +14,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Input from '@mui/joy/Input';
 import FormLabel from '@mui/joy/FormLabel';
-import imgg from "./img/contact-us(1).jpg";
+import imgg from "./img/vec.jpg";
 function Contact() {
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
@@ -25,6 +25,7 @@ function Contact() {
       const isvalidate = ()=>{
         let isvalid =true;
         let errmesage={};
+        
         if(name === null || name === ""){  
           isvalid = false;
     errmesage.name="لطفا نام و نام خانوادگی خود را وارد کنید";
@@ -84,7 +85,7 @@ function Contact() {
  className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-full h-auto flex-col lg:flex-row items-center self-center pt-6 md:mt-3 mx-auto'>
 
 <div className=' w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
-    <div className='flex justify-center self-center w-[300px] md:w-[450px] lg:w-[50vw] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'>  
+    <div className='  flex justify-center self-center w-[300px] md:w-[450px] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'>  
 <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
@@ -202,7 +203,7 @@ function Contact() {
 
 
    </div> 
-   <div  className='w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
+   <div  className='w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto '>
   
        
 <div className=' w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
