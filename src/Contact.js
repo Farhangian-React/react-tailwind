@@ -14,7 +14,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Input from '@mui/joy/Input';
 import FormLabel from '@mui/joy/FormLabel';
-import imgg from "./img/ContactA.png";
+import imgg from "./img/ContactAA.gif";
 function Contact() {
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
