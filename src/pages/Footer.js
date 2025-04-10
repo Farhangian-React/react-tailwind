@@ -28,10 +28,10 @@ function Footer() {
           bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100 rounded-md h-[200px] xl:h-[250px] px-4">
         
           <nav class=" formbutton2 flex flex-col mt-4 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
-            <NavLink  class='hover:text-[#ba4008]' to={"/suitcase"} > درباره ی ما </NavLink>
-            <NavLink  class='hover:text-[#ba4008]' to={"/suitcase"} >   تاریخچه ی برند </NavLink>
-            <NavLink  class='hover:text-[#ba4008]' to={"/suitcase"} > تماس با ما </NavLink>
-            <NavLink  class='hover:text-[#ba4008]' to={"/sendingmethod"}  > نحوه ی ارسال </NavLink>
+            <NavLink  className="navv" to={"/suitcase"} > درباره ی ما </NavLink>
+            <NavLink  className="navv" to={"/suitcase"} >   تاریخچه ی برند </NavLink>
+            <NavLink  className="navv" to={"/suitcase"} > تماس با ما </NavLink>
+            <NavLink className="navv" to={"/sendingmethod"}  > نحوه ی ارسال </NavLink>
           </nav>
         </div>
           </div>
@@ -41,10 +41,10 @@ function Footer() {
           <div className="button2 flex flex-col justify-start items-center sm:items-start
           bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100 rounded-md h-[200px] xl:h-[250px] px-4">   
           <nav class="formbutton2 flex flex-col mt-4 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
-            <NavLink to={"/allbag"} class="hover:text-[#ba4008]" > همه ی کیف ها  </NavLink>
-            <NavLink to={"/allshose"} class="hover:text-[#ba4008]" > کفش ها  </NavLink>
-            <NavLink to={"/allack"} class="hover:text-[#ba4008]" > اکسسوری  </NavLink>
-            <NavLink to={"/suitcase"}class="hover:text-[#ba4008]" > چمدان و ساک </NavLink>
+            <NavLink to={"/allbag"} className="navv" > همه ی کیف ها  </NavLink>
+            <NavLink to={"/allshose"} className="navv" > کفش ها  </NavLink>
+            <NavLink to={"/allack"} className="navv"  > اکسسوری  </NavLink>
+            <NavLink to={"/suitcase"} className="navv" > چمدان و ساک </NavLink>
           </nav>
         </div>
         </div>
@@ -97,10 +97,10 @@ function Footer() {
            <div className="button3 flex flex-col justify-start items-center sm:items-start h-auto  px-0.5">
         
           <nav class=" formbutton3 flex flex-col mt-1 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
-            <NavLink  class='hover:text-[#ba4008]' to={"/suitcase"} > درباره ی ما </NavLink>
-            <NavLink  class='hover:text-[#ba4008]' to={"/suitcase"} >   تاریخچه ی برند </NavLink>
-            <NavLink  class='hover:text-[#ba4008]' to={"/suitcase"}  > تماس با ما </NavLink>
-            <NavLink  class='hover:text-[#ba4008]' to={"/sendingmethod"} > نحوه ی ارسال </NavLink>
+            <NavLink className="navv" to={"/suitcase"} > درباره ی ما </NavLink>
+            <NavLink  className="navv" to={"/suitcase"} >   تاریخچه ی برند </NavLink>
+            <NavLink className="navv" to={"/suitcase"}  > تماس با ما </NavLink>
+            <NavLink  className="navv" to={"/sendingmethod"} > نحوه ی ارسال </NavLink>
           </nav>
         </div>
           </div>
@@ -109,10 +109,10 @@ function Footer() {
           </p>
           <div className="button3 flex flex-col justify-start items-center sm:items-start h-auto  px-0.5">   
           <nav class="formbutton3 flex flex-col mt-1 space-y-2 text-sm text-gray-700 text-center sm:text-right h-full w-full ">
-          <NavLink to={"/allbag"} class="hover:text-[#ba4008]" > همه ی کیف ها  </NavLink>
-            <NavLink to={"/allshose"} class="hover:text-[#ba4008]" > کفش ها  </NavLink>
+          <NavLink to={"/allbag"} className="navv" > همه ی کیف ها  </NavLink>
+            <NavLink to={"/allshose"} className="navv" > کفش ها  </NavLink>
             <NavLink to={"/allack"} class="hover:text-[#ba4008]" > اکسسوری  </NavLink>
-            <NavLink to={"/suitcase"} class="hover:text-[#ba4008]" > چمدان و ساک </NavLink>
+            <NavLink to={"/suitcase"} className="navv" > چمدان و ساک </NavLink>
           </nav>
         </div>
         </div>

@@ -213,7 +213,7 @@ return (
       breakLabel="..."
       nextLabel=" >>"
       onPageChange={handlePageClick}
-      pageRangeDisplayed={7}
+      pageRangeDisplayed={3}
       pageCount={pageCount}
       previousLabel="<<"
       renderOnZeroPageCount={null}
