@@ -233,7 +233,7 @@ function Contact() {
    </div>
    <div  className="mt-6 md:mt-16 flex flex-row  justify-center items-center h-full"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={450} height={450} src="https://img.freepik.com/free-vector/instant-information-concept-illustration_114360-5264.jpg?t=st=1744270022~exp=1744273622~hmac=ad150162528af3a998e2c7213d480b090d04cf90ec28e1d5b35ebabd70b906b6&w=826" alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={450} height={450} src="https://storyset.com/illustration/online/cuate#FF9210FF&hide=&hide=complete" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         {/*
