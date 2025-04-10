@@ -233,7 +233,7 @@ function Contact() {
    </div>
    <div  className="mt-6 md:mt-16 flex flex-row  justify-center items-center h-full"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={450} height={450} src="https://storyset.com/illustration/online/cuate#FF9210FF&hide=&hide=complete" alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={450} height={450} src="https://img.freepik.com/free-vector/cartoon-exhausted-woman-sitting-table-working_74855-6943.jpg?t=st=1744271275~exp=1744274875~hmac=45701de385f0b8ebaeb89788183e240d4bfe42e3feb7d7266676b5c38051e5b3&w=1380" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         {/*
