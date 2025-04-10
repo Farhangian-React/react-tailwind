@@ -232,12 +232,19 @@ function Contact() {
     </Box>
 </div>
    </div>
+   <div  className="mt-6 md:mt-16 flex flex-row  justify-center items-center h-full"
+          style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
+          <img width={450} height={450} src={imgg} alt="" className="hover:scale-110 hover:opacity-55" 
+            style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
+        </div>
+        {/*
    <div
    className=' flex flex-row justify-center self-center bg-contain bg-center 
        bg-no-repeat  h-[400px] w-[80vw]  lg:w-[50vw] mx-auto mt-1 ' style={{
          backgroundImage: `url(${imgg})`,
        }}>
         </div>
+        */}
    </div>
      </div>
     <Box sx={{width:'100%' }}>
