@@ -83,8 +83,8 @@ function Contact() {
 <div dir='rtl'
  className='bg-gradient-to-r from-orange-100 via-indigo-100 to-orange-100  flex justify-start lg:justify-start w-full h-auto flex-col lg:flex-row items-center self-center pt-6 md:mt-3 mx-auto'>
 
-<div className=' w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
-    <div className='  flex justify-center self-center w-[300px] md:w-[450px] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'>  
+<div className=' w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-6 md:px-3  py-3'>
+    <div className='  flex justify-center self-center w-[280px] md:w-[450px] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'>  
 <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
@@ -206,7 +206,7 @@ function Contact() {
   
        
 <div className=' w-[95vw] lg:w-[50vw] flex justify-center flex-col self-start mx-auto px-3 py-3'>
-    <div className='flex justify-center self-center w-[300px] md:w-[450px] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'> 
+    <div className='flex justify-center self-center w-[280px] md:w-[450px] h-[100px] flex-col border-b-2 border-b-gray-500 px-3 py-3'> 
        <div className='flex flex-row justify-center'
 >
 <p className=' text-[16px] md:text-[20px] lg:text-[26px] font-bold text-gray-700 text-center  '>
@@ -231,9 +231,9 @@ function Contact() {
     </Box>
 </div>
    </div>
-   <div  className="mt-6 md:mt-16 flex flex-row  justify-center items-center h-full"
+   <div  className="mt-6 md:mt-16 flex flex-row  justify-center items-center h-full mx-10 md:mx-0"
           style={{borderRadius:"63% 37% 55% 45% / 68% 65% 35% 32%  "}}    >
-          <img width={450} height={450} src="https://img.freepik.com/free-vector/cartoon-exhausted-woman-sitting-table-working_74855-6943.jpg?t=st=1744271275~exp=1744274875~hmac=45701de385f0b8ebaeb89788183e240d4bfe42e3feb7d7266676b5c38051e5b3&w=1380" alt="" className="hover:scale-110 hover:opacity-55" 
+          <img width={400} height={450} src="https://img.freepik.com/free-vector/cartoon-exhausted-woman-sitting-table-working_74855-6943.jpg?t=st=1744271275~exp=1744274875~hmac=45701de385f0b8ebaeb89788183e240d4bfe42e3feb7d7266676b5c38051e5b3&w=1380" alt="" className="hover:scale-110 hover:opacity-55" 
             style={{borderRadius:"23% 77% 11% 89% / 66% 42% 58% 34% "}}/> 
         </div>
         {/*
