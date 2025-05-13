@@ -223,7 +223,7 @@ size="lg"
 <div className="flex  justify-between pr-4 py-0 h-8 ">
 <NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
 >
-<RiAdminLine className='font-black w-7 h-6 hover:text-zinc-700  text-orange-500 mx-4 ' />
+<RiAdminLine className='font-black w-7 h-6 text-zinc-700  hover:text-orange-500 mx-4 ' />
 </NavLink>
 <Badge color='warning' badgeContent={cartItemsBuy.length} sx={{color:"white"}}>
 <NavLink to={"/endbuy"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
