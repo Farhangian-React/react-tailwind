@@ -9,7 +9,6 @@ import Badge from '@mui/material/Badge';
 import {CartBuyContext} from '../Shared/Cart-Context';
 import {CartContext} from '../Shared/Cart-Context';
 import {CardData} from '../Shared/Cart-Context';
-
 import InputBase from '@mui/material/InputBase';
 import { Grid } from '@mui/material';
 import Modal from '@mui/joy/Modal';
@@ -174,7 +173,7 @@ size="lg"
    
   </div>
   <div className='w-[150px]   inline-flex justify-start self-center items-center'  > 
-  <p className='text-[22px] text-gray-500  text-right font-bold'   >
+  <p className='text-[20px] text-gray-500  text-right font-bold'   >
             {addCommas(convertToPersian((convertToEnglish(item.pricenum1)-(convertToEnglish(item.pricenum1)*item.off / 100))+''))} تومان 
            </p>
   </div>
@@ -224,12 +223,12 @@ size="lg"
 <div className="flex  justify-between pr-4 py-0 h-8 ">
 <NavLink to={"/signup"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
 >
-<RiAdminLine className='font-black w-7 h-6 text-zinc-700  hover:text-orange-500 mx-4 ' />
+<RiAdminLine className='font-black w-7 h-6 hover:text-zinc-700  text-orange-500 mx-4 ' />
 </NavLink>
 <Badge color='warning' badgeContent={cartItemsBuy.length} sx={{color:"white"}}>
 <NavLink to={"/endbuy"}  style={{display:"flex",textAlign:"center", cursor:"pointer", alignItems:"center",fontWeight:600}}
 >
-<LuShoppingCart className='font-black w-7 h-6 text-zinc-700 hover:text-orange-500' />
+<LuShoppingCart className='font-black w-7 h-6 hover:text-zinc-700 text-orange-500' />
 </NavLink>
   </Badge>
 </div>

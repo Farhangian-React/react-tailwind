@@ -105,7 +105,7 @@ setDatamapshow([t]);
         </Select>
       </FormControl></div>
     </div>
-    <div className='flex flex-col justify-start h-[350px] rounded-sm p-2 mx-1 overflow-y-auto'>
+    <div className='flex flex-col justify-start h-[350px] rounded-sm p-2 mx-1 overflow-y-auto [&::-webkit-scrollbar]:h-0'>
     <div  ref={refbox} className=' flex flex-row justify-start bg-contain bg-center 
     bg-no-repeat  h-[220px] mx-auto mt-5 ' style={{
       backgroundImage: `url(${storimage})`,

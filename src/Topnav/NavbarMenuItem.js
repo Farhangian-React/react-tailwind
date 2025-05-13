@@ -22,21 +22,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-start',
 }));
 
-const drawerWidth = 240;
-const nestedMenuItems = [
-  {
-    title: "Hero",
-  },
-  {
-    title: "Features",
-  },
-  {
-    title: "Testimonials",
-  },
-  {
-    title: "Ecommerce",
-  },
-];
+
 
 
 function NavbarMenuItem() {
